@@ -70,7 +70,7 @@
   --bs-border-radius-xl: 0.75rem;
   --bs-border-radius-2xl: 1rem;
   --bs-border-radius-pill: 50rem;
-  --bs-heading-color: #344767;
+  --bs-heading-color: #ffffff;
   --bs-link-color: #e91e63;
   --bs-link-hover-color: #e91e63;
   --bs-code-color: #d63384;
@@ -1666,7 +1666,7 @@ progress {
 
   .col-lg-4 {
     flex: 0 0 auto;
-    width: 33.333333%;
+    width: 348px;
   }
 
   .col-lg-5 {
