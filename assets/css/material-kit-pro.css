@@ -509,7 +509,9 @@ output {
 }
 
 iframe {
-  border: 0;
+  border-width: 5px;
+  border-radius: 8px;
+  border-color: #fb8c00;
 }
 
 summary {
@@ -7182,19 +7184,21 @@ fieldset:disabled .btn {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 15;
+  z-index: 2;
   display: flex;
   justify-content: center;
   padding: 0;
   margin-right: 15%;
- 
-  margin-left: 15%;
+  margin-bottom: 1rem;
+   margin-left: 15%;
   list-style: none;
 }
 
+
+
 .carousel-indicators [data-bs-target] {
-  box-sizing: border-box;
-  flex:auto;
+  box-sizing: content-box;
+  flex:0 1 auto;
   width: 30px;
   height: 3px;
   padding: 0;
@@ -7202,7 +7206,7 @@ fieldset:disabled .btn {
   margin-left: 3px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #0057f7;
+  background-color: #fff;
   background-clip: padding-box;
   border: 0;
   border-top: 10px solid transparent;
@@ -7217,9 +7221,7 @@ fieldset:disabled .btn {
   }
 }
 
-.carousel-indicators .active {
-  opacity: 1;
-}
+
 
 .carousel-caption {
   position: absolute;
@@ -7317,6 +7319,7 @@ fieldset:disabled .btn {
 }
 
 .carousel-indicators .active {
+  opacity: 1;
   background-color: #f5593d;
 }
 
@@ -22964,6 +22967,33 @@ html {
   backdrop-filter: saturate(200%) blur(30px);
   background-color: #3B444F !important;
 }
+.blurIndex {
+  box-shadow: inset 0px 0px 2px #fefefed1;
+  -webkit-backdrop-filter: saturate(200%) blur(30px);
+  backdrop-filter: saturate(200%) blur(30px);
+  background-color: #cbd2dd !important;
+}
+
+.blur2 {
+  box-shadow: inset 0px 0px 2px #fefefed1;
+  -webkit-backdrop-filter: saturate(200%) blur(30px);
+  backdrop-filter: saturate(200%) blur(30px);
+  background: linear-gradient(0deg, rgba(59,68,79,1) 31%, rgba(154,154,156,1) 74%, rgba(255,255,255,1) 100%);
+}
+
+.blur3 {
+  box-shadow: inset 0px 0px 2px #fefefed1;
+  -webkit-backdrop-filter: saturate(200%) blur(30px);
+  backdrop-filter: saturate(200%) blur(30px);
+  background: linear-gradient(0deg, rgba(59,68,79,1) 31%, rgba(152,152,154,1) 61%, rgba(255,255,255,1) 100%);
+}
+
+.blurContact {
+  box-shadow: inset 0px 0px 2px #fefefed1;
+  -webkit-backdrop-filter: saturate(200%) blur(30px);
+  backdrop-filter: saturate(200%) blur(30px);
+  background: linear-gradient(0deg, rgba(59,68,79,1) 28%, rgba(154,154,156,1) 59%, rgba(255,255,255,1) 92%);
+}
 
 .blur.saturation-less {
   -webkit-backdrop-filter: saturate(20%) blur(30px);
@@ -38281,6 +38311,52 @@ text,
   animation: jvm-line-animation 10s linear forwards infinite;
 }
 
+.container-all{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 600ms;
+}
+
+.container-all:target{
+  background: rgba(0, 0, 0, 0.8);
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup{
+  width: 70%;
+  max-width: 800px;
+  height: 500px;
+  position: absolute;
+  display: flex;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-close-popup{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  padding: 20px;;
+  background: black;
+  color: white;
+  border-radius: 50%;
+  line-height: 10px;
+}
+
+
+
 @-webkit-keyframes jvm-line-animation {
   from {
     stroke-dashoffset: 250;
@@ -38294,3 +38370,4 @@ text,
 }
 
 /*# sourceMappingURL=kit-pro.css.map */
+ 
