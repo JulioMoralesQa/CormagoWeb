@@ -33,310 +33,298 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="../../assets/css/material-kit-pro.css?v=3.0.3" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
 </head>
 
-<body class="blog-categories bg-gray-200">
+<body class="blog-categories bg-dark">
   <!-- Navbar Transparent -->
-  <nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3  navbar-transparent ">
-    <div class="container">
-      <a class="navbar-brand  text-white  d-none d-md-block" href="/index.html" rel="tooltip"
-        title="Designed and Coded by Creative Tim" data-placement="bottom">
-        <img src="/assets/img/logos/LogoCormagoBlancoFull.png" style="width: 150px;">
-      </a>
-      <a class="navbar-brand  text-white  d-block d-md-none"
-        href=" https://demos.creative-tim.com/material-kit-pro/index " rel="tooltip"
-        title="Designed and Coded by Creative Tim" data-placement="bottom" target="_blank">
-        <img src="/assets/img/logos/LogoCormagoBlanco.png">
-      </a>
-      <a href="https://www.creative-tim.com/product/material-design-system-pro#pricingCard"
-        class="btn btn-sm  bg-white  mb-0 ms-auto d-lg-none d-block">Buy Now</a>
-      <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon mt-2">
-          <span class="navbar-toggler-bar bar1"></span>
-          <span class="navbar-toggler-bar bar2"></span>
-          <span class="navbar-toggler-bar bar3"></span>
-        </span>
-      </button>
-      <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-1" id="navigation">
-        <ul class="navbar-nav navbar-nav-hover ms-auto">
-          <li class="nav-item3  mx-2">
-            <a role="button" class="nav-link ps-2 d-flex cursor-pointer align-items-center" aria-expanded="false"
-              href="/index.html" style="font-size: large;">
-              <i class="material-icons opacity-6 me-2 text-lg">dashboard</i>
-              Inicio
+  <nav
+          class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-sticky shadow position-sticky my-2 py-1 start-0 end-0 ">
+          <div class="container">
+            <a class="navbar-brand font-weight-bolder ms-sm-3  d-none d-md-block" href="/index.html" rel="tooltip"
+              title="Designed and Coded by Creative Tim" data-placement="bottom">
+              <img src="/assets/img/logos/LogoCormagoBlancoFull.png" style="width: 140px;">
             </a>
-          </li>
-          <li class="nav-item3 dropdown dropdown-hover mx-2">
-            <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" role="button" id="dropdownMenuAccount"
-              data-bs-toggle="dropdown" aria-expanded="false" style="font-size: large;">
-              <i class="material-icons opacity-6 me-2 text-lg">contacts</i>
-              Empresa
-              <img src="../../assets/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-2 d-lg-block d-none">
-              <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow d-lg-none d-block ms-auto">
+            <a class="navbar-brand font-weight-bolder ms-sm-3  d-block d-md-none" href="/index.html" rel="tooltip"
+              title="Designed and Coded by Creative Tim" data-placement="bottom">
+              <img src="/assets/img/logos/LogoCormagoBlancoFull.png" style="width: 140px;">
             </a>
-            <div class="dropdown-menu dropdown-menu-animation dropdown-SM border-radius-xl p-3 mt-0 mt-lg-3"
-              aria-labelledby="dropdownMenuAccount">
-              <div class="d-none d-lg-flex">
-                <ul class="list-group w-100">
-                  <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                    <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                      id="dropdownSignIn" href="/pages/blog/Historia.html">
-                      <span>Historia</span>
-                    </a>
-                  </li>
-                  <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                    <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                      id="dropdownSignUp" href="/pages/blog/Mision.html">
-                      <span>Mision</span>
-                    </a>
-                  </li>
-                  <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                    <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                      id="dropdownPasswordReset" href="/pages/blog/Vision.html">
-                      <span>Vision</span>
-                    </a>
-                  </li>
-                  <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                    <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                      id="dropdownError" href="/pages/blog/Creencias.html">
-                      <span>Creencias</span>
-                    </a>
-                  </li>
-                  <li class="nav-item list-group-item border-0 p-0">
-                    <a href="/pages/blog/Proposito.html"
-                      class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
-                      <span>Proposito</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="row d-lg-none">
-                <div class="col-12 d-flex justify-content-center flex-column">
-                  <ul class="list-group w-100">
-                    <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                      <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                        id="dropdownSignIn" href="./pages/blog/Historia.html">
-                        <span>Historia</span>
-                      </a>
-                    </li>
-                    <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                      <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                        id="dropdownSignUp" href="/pages/blog/Mision.html">
-                        <span>Mision</span>
-                      </a>
-                    </li>
-                    <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                      <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                        id="dropdownPasswordReset" href="/pages/blog/Vision.html">
-                        <span>Vision</span>
-                      </a>
-                    </li>
-                    <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                      <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                        id="dropdownError" href="./pages/blog/Creencias.html">
-                        <span>Creencias</span>
-                      </a>
-                    </li>
-                    <li class="nav-item list-group-item border-0 p-0">
-                      <a href="/pages/blog/Proposito.html"
-                        class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
-                        <span>Proposito</span>
-                      </a>
-                    </li>
-                  </ul>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item3 dropdown dropdown-hover mx-2">
-            <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" role="button" id="dropdownMenuBlocks"
-              data-bs-toggle="dropdown" aria-expanded="false" style="font-size: large;">
-              <i class="material-icons opacity-6 me-2 text-lg">view_day</i>
-              Servicios
-              <img src="../../assets/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-2 d-lg-block d-none">
-              <img src="../../assets/img/down-arrow-dark.svg" alt="down-arrow" class="arrow d-lg-none d-block ms-auto">
-            </a>
-            <div class="dropdown-menu dropdown-menu-animation dropdown-SM border-radius-xl p-3 mt-0 mt-lg-3"
-              aria-labelledby="dropdownMenuAccount">
-              <div class="d-none d-lg-flex">
-                <ul class="list-group w-100">
-                  <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                    <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                      id="dropdownSignIn" href="/pages/Servicios/TransportePersonal.html">
-                      <span>Transporte de personal</span>
-                    </a>
-                  </li>
-                  <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                    <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                      id="dropdownSignUp" href="/pages/Servicios/TransporteResiduos.html">
-                      <span>Transporte de residuos</span>
-                    </a>
-                  </li>
-                  <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                    <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                      id="dropdownPasswordReset" href="/pages/Servicios/Mip.html">
-                      <span>Manejo Integral de Plagas</span>
-                    </a>
-                  </li>
-                  <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                    <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                      id="dropdownError" href="/pages/Servicios/ObraCivil.html">
-                      <span>Obra civil</span>
-                    </a>
-                  </li>
-                  <li class="nav-item list-group-item border-0 p-0">
-                    <a href="/pages/Servicios/SeguridadPrivada.html"
-                      class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
-                      <span>Seguridad privada</span>
-                    </a>
-                  </li>
 
-                </ul>
-              </div>
-              <div class="row d-lg-none">
-                <div class="col-12 d-flex justify-content-center flex-column">
-                  <ul class="list-group w-100">
-                    <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                      <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                        id="dropdownSignIn" href="/pages/Servicios/TransportePersonal.html">
-                        <span>Transporte de personal</span>
-                      </a>
-                    </li>
-                    <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                      <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                        id="dropdownSignUp" href="/pages/Servicios/TransporteResiduos.html">
-                        <span>Transporte de residuos</span>
-                      </a>
-                    </li>
-                    <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                      <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                        id="dropdownPasswordReset" href="/pages/Servicios/Mip.html">
-                        <span>Manejo Integral de Plagas</span>
-                      </a>
-                    </li>
-                    <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                      <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                        id="dropdownError" href="/pages/Servicios/ObraCivil.html">
-                        <span>Obra civil</span>
-                      </a>
-                    </li>
-                    <li class="nav-item list-group-item border-0 p-0">
-                      <a href="/pages/Servicios/SeguridadPrivada.html"
-                        class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
-                        <span>Seguridad privada</span>
-                      </a>
-                    </li>
-                  </ul>
+            <button class="navbar-toggler shadow-none ms-md-2" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon mt-2">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0" id="navigation">
+              <ul class="navbar-nav navbar-nav-hover ms-auto">
+                <li class="nav-item linkSec2 dropdown dropdown-hover mx-2">
+                  <a  class="nav-link ps-2 d-flex cursor-pointer align-items-center"  aria-expanded="false" href="/index.html" style="font-size: large; width: 80px;">
+                    <i class="material-icons opacity-6 me-2 text-lg">dashboard</i>
+                    Inicio                 
                   </a>
-                </div>
-              </div>
+                </li>
+                <li class="nav-item linkSec2 dropdown dropdown-hover mx-2">
+                  <a role="button" class="nav-link ps-2 d-flex cursor-pointer align-items-center"
+                    id="dropdownMenuAccount" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: large;">
+                    <i class="material-icons opacity-6 me-2 text-lg">contacts</i>
+                    Empresa
+                    <img src=" /assets/img/down-arrow-white.svg  " alt="down-arrow"
+                      class="arrow ms-2 d-lg-block d-none">
+                    <img src="/assets/img/down-arrow-white.svg" alt="down-arrow"
+                      class="arrow ms-1 d-lg-none d-block ms-auto">
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-animation dropdown-SM border-radius-xl p-3 mt-0 mt-lg-3"
+                    aria-labelledby="dropdownMenuAccount">
+                    <div class="d-none d-lg-flex">
+                      <ul class="list-group w-100">
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                          <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                            id="dropdownSignIn" href="/pages/blog/Historia.html">
+                            <span>Historia</span>
+                          </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                          <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                            id="dropdownSignUp" href="/pages/blog/Mision.html">
+                            <span>Misión</span>
+                          </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                          <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                            id="dropdownPasswordReset" href="/pages/blog/Vision.html">
+                            <span>Visión</span>
+                          </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                          <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                            id="dropdownError" href="/pages/blog/Creencias.html">
+                            <span>Creencias</span>
+                          </a>
+                        </li>
+                        <li class="nav-item list-group-item border-0 p-0">
+                          <a href="/pages/blog/Proposito.html"
+                            class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
+                            <span>Propósito</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="row d-lg-none">
+                      <div class="col-12 d-flex justify-content-center flex-column">
+                        <ul class="list-group w-100">
+                          <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                            <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                              id="dropdownSignIn" href="/pages/blog/Historia.html">
+                              <span>Historia</span>
+                            </a>
+                          </li>
+                          <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                            <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                              id="dropdownSignUp" href="/pages/blog/Mision.html">
+                              <span>Misión</span>
+                            </a>
+                          </li>
+                          <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                            <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                              id="dropdownPasswordReset" href="/pages/blog/Vision.html">
+                              <span>Visión</span>
+                            </a>
+                          </li>
+                          <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                            <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                              id="dropdownError" href="/pages/blog/Creencias.html">
+                              <span>Creencias</span>
+                            </a>
+                          </li>
+                          <li class="nav-item list-group-item border-0 p-0">
+                            <a href="/pages/blog/Proposito.html"
+                              class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
+                              <span>Propósito</span>
+                            </a>
+                          </li>
+                        </ul>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item linkSec2 dropdown dropdown-hover mx-2">
+                  <a role="button" class="nav-link ps-2 d-flex cursor-pointer align-items-center"
+                    id="dropdownMenuAccount" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: large;">
+                    <i class="material-icons opacity-6 me-2 text-lg">view_day</i>
+                    Servicios
+                    <img src=" /assets/img/down-arrow-white.svg  " alt="down-arrow"
+                      class="arrow ms-2 d-lg-block d-none">
+                    <img src="/assets/img/down-arrow-white.svg" alt="down-arrow"
+                      class="arrow ms-1 d-lg-none d-block ms-auto">
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-animation dropdown-SM border-radius-xl p-3 mt-0 mt-lg-3"
+                    aria-labelledby="dropdownMenuAccount">
+                    <div class="d-none d-lg-flex">
+                      <ul class="list-group w-100">
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                          <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                            id="dropdownPasswordReset" href="/pages/Servicios/Mip.html">
+                            <span>Manejo integral de plagas, sanitización y cetrería</span>
+                          </a>
+                        </li>
+                        <li class="nav-item list-group-item border-0 p-0">
+                          <a href="/pages/Servicios/SeguridadPrivada.html"
+                            class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
+                            <span>Seguridad privada e Implementación de </br> sistemas tecnológicos de seguridad</span>
+                          </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                          <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                            id="dropdownSignUp" href="/pages/Servicios/TransporteResiduos.html">
+                            <span>Recolección y transporte de residuos peligrosos </br> y de manejo especial </span>
+                          </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                          <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                            id="dropdownSignIn" href="/pages/Servicios/TransportePersonal.html">
+                            <span>Transporte de personal</span>
+                          </a>
+                        </li>                       
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                          <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                            id="dropdownError" href="/pages/Servicios/ObraCivil.html">
+                            <span>Ingeniería en obra civil y </br> manteniemiento de instalaciones</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="row d-lg-none">
+                      <div class="col-12 d-flex justify-content-center flex-column">
+                        <ul class="list-group w-100">
+                          <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                            <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                              id="dropdownPasswordReset" href="/pages/Servicios/Mip.html">
+                              <span>Manejo integral de plagas, sanitización y cetrería</span>
+                            </a>
+                          </li>
+                          <li class="nav-item list-group-item border-0 p-0">
+                            <a href="/pages/Servicios/SeguridadPrivada.html"
+                              class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
+                              <span>Seguridad privada e Implementación de </br> sistemas tecnológicos de seguridad</span>
+                            </a>
+                          </li>
+                          <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                            <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                              id="dropdownSignUp" href="/pages/Servicios/TransporteResiduos.html">
+                              <span>Recolección y transporte de residuos peligrosos </br> y de manejo especial </span>
+                            </a>
+                          </li>
+                          <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                            <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                              id="dropdownSignIn" href="/pages/Servicios/TransportePersonal.html">
+                              <span>Transporte de personal</span>
+                            </a>
+                          </li>                       
+                          <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                            <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                              id="dropdownError" href="/pages/Servicios/ObraCivil.html">
+                              <span>Ingeniería en obra civil y </br> manteniemiento de instalaciones</span>
+                            </a>
+                          </li>
+                        </ul>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="nav-item linkSec2  mx-2">
+                  <a role="button" class="nav-link ps-2 d-flex cursor-pointer align-items-center" aria-expanded="false"
+                    href="/pages/blog/Contacto.html" style="font-size: large;">
+                    <i class="material-icons opacity-6 me-2 text-lg">article</i>
+                    Contacto
+                  </a>
+                </li>
+                <div class="active2 ms-sm-3"></div>
+              </ul>
             </div>
-          </li>
-          <li class="nav-item3  mx-2">
-            <a role="button" class="nav-link ps-2 d-flex cursor-pointer align-items-center" aria-expanded="false"
-              href="/pages/blog/Contacto.html" style="font-size: large;">
-              <i class="material-icons opacity-6 me-2 text-lg">article</i>
-              Contacto
-            </a>
-          </li>
-          <div class="active2 ms-sm-3"></div>
-        </ul>
-
-      </div>
-    </div>
-  </nav>
-  <!-- End Navbar -->
+          </div>
+  </nav>  
   <!-- End Navbar -->
   <!-- -------- START HEADER 4 w/ search book a ticket form ------- -->
-  <header>
-    <div class="page-header min-vh-50" style="background-image: url('/assets/img/logos/HeaderCormago3.png')"
-      loading="lazy">
-      <span class="mask bg-dark opacity-2"></span>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-white text-center">
+  <section class="border-radius-xl" id="descripcion" >
+    <div class="parallax3 min-vh-80">
+      <span class="mask  bg-dark opacity-5"></span>
+                             
+    </div>
+</section>
+  <!-- -------- END HEADER 4 w/ search book a ticket form ------- -->
+ 
+  <section class="pb-8 mb-2 blurGlass  border-radius-xl  mt-4" id="descripcion">
+   
+    <div class="containerD px-0">
 
+      <div class="row justify-content-center pt-5">
+                
+        <div class="col-md-5 d-flex mt-5 me-4" style="width: 494px; height: 460px;">
+          <div class="card card-raised page-carousel shadowSec">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                  class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                  aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                  aria-label="Slide 5"></button>
+                
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/MIP/1.jpg"
+                    alt="First slide" style="width: 470px;">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/MIP/2.jpg"
+                    alt="Second slide" style="width: 470px;">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/MIP/3.jpg"
+                    alt="Third slide" style="width: 470px;">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/MIP/4.jpg"
+                    alt="Third slide" style="width: 470px;">
+                </div>
+                <div class="carousel-item">
+                  <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/MIP/5.jpg"
+                    alt="Third slide" style="width: 470px;">
+                </div>
+                
+              </div>
+              <button class="left carousel-control carousel-control-prev" type="button"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="fa fa-angle-left"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="right carousel-control carousel-control-next" type="button"
+                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="fa fa-angle-right"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </header>
-  <!-- -------- END HEADER 4 w/ search book a ticket form ------- -->
-  <div class="card card-body blur2 shadow-blur mx-3 mx-md-4 mt-n6 mb-4">
-    <div class="container pb-6">
-
-      <div class="row">
-        <div class="col-lg-12" style="
-        padding-left: 0px;
-        padding-right: 0px;
-    ">
-          <div class="container" style="
-          padding-left: 0px;
-          padding-right: 0px;
-      ">
-            <div class="row pb-4 mb-4 justify-content-between">
-              <div class="col-lg-4 pb-4 mt-3 align-items-center" style="width: 470px;">
-                <div class="card card-raised page-carousel">
-                  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                        aria-label="Slide 4"></button>
-                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                        aria-label="Slide 5"></button>
-                      
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/MIP/1.jpg"
-                          alt="First slide" style="width: 470px;">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/MIP/2.jpg"
-                          alt="Second slide" style="width: 470px;">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/MIP/3.jpg"
-                          alt="Third slide" style="width: 470px;">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/MIP/4.jpg"
-                          alt="Third slide" style="width: 470px;">
-                      </div>
-                      <div class="carousel-item">
-                        <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/MIP/5.jpg"
-                          alt="Third slide" style="width: 470px;">
-                      </div>
-                      
-                    </div>
-                    <button class="left carousel-control carousel-control-prev" type="button"
-                      data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                      <span class="fa fa-angle-left"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="right carousel-control carousel-control-next" type="button"
-                      data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                      <span class="fa fa-angle-right"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-7  align-items-center d-flex flex-column pt-2">
-                <h3 class="card-title">
-                  <a href="javascript:;" class="text-dark">MANEJO INTEGRAL DE PLAGAS</a>
-                </h3>
-                <div class="progress-bar bg-warning mb-3" role="progressbar" style="width: 50%" aria-valuenow="50"
-                  aria-valuemin="0" aria-valuemax="50"></div>
-                <p class="card-description pcontact text-justify" style="font-size: large;">
-                  El servicio de manejo integral de plagas es una solución integral y especializada para controlar y
+        <div class="col-md-7 mt-2">
+          <h4 class="card-title text-center border-bottomS mb-4">
+            <a href="javascript:;" class="text-white" style="letter-spacing: 4px; ">MANEJO INTEGRAL DE PLAGAS, SANITIZACIÓN Y CETRERÍA</a>
+          </h4>
+          
+          <p class="card-description pcontact text-justify" style="font-size: large;">
+            El servicio de manejo integral de plagas es una solución integral y especializada para controlar y
                   prevenir la presencia de plagas en el sector industrial y gubernamental.</br>
                   Nuestro enfoque se basa en un plan de acción personalizado que se adapta a las necesidades específicas
                   de cada cliente y a las particularidades de su industria. Realizamos un análisis detallado de las
@@ -348,369 +336,385 @@
                   almacenes, fábricas y centros de distribución. Contamos con planes de acción personalizados que se
                   ajustan a las necesidades específicas de cada sector industrial, como la industria alimentaria,
                   farmacéutica, cosmética, entre otras.</br>
-                  
-                </p>
-              </div>
-            </div>
-            <div class="row mt-4">
-              <p class="card-description pcontact text-justify" style="font-size: large;">
-                Para el gobierno federal, nuestro servicio de manejo de plagas está enfocado en la eliminación de
-                  plagas en edificios públicos, como oficinas, escuelas, hospitales y otras instituciones federales.
-                  Garantizamos la eliminación total de plagas y la prevención de una posible reaparición, para
-                  garantizar la salud y bienestar de la población.</br>
-                  En conclusión, nuestro servicio de manejo integral de plagas es una solución completa y personalizada.
-                  Ofrecemos calidad, rapidez y garantía de eliminación total de plagas, con el compromiso de proteger la
-                  salud pública y el medio ambiente. Con nuestra experiencia en el sector, nos enorgullece ofrecer un
-                  servicio eficiente, profesional y confiable a su disposición.
-              </p>
-            </div>
-          </div>
-        </div>
+          </p>
+        </div>        
       </div>
+      <div class="row mt-4 me-5 ms-5">
+        <p class="card-description pcontact text-justify" style="font-size: large;">
+          Para el gobierno federal, nuestro servicio de manejo de plagas está enfocado en la eliminación de
+            plagas en edificios públicos, como oficinas, escuelas, hospitales y otras instituciones federales.
+            Garantizamos la eliminación total de plagas y la prevención de una posible reaparición, para
+            garantizar la salud y bienestar de la población.</br>
+            En conclusión, nuestro servicio de manejo integral de plagas es una solución completa y personalizada.
+            Ofrecemos calidad, rapidez y garantía de eliminación total de plagas, con el compromiso de proteger la
+            salud pública y el medio ambiente. Con nuestra experiencia en el sector, nos enorgullece ofrecer un
+            servicio eficiente, profesional y confiable a su disposición.
+        </p>
+      </div>
+
     </div>
-    <section class="pt-5 mt-5 pb-8" id="count-stats">
-      <div class="container  border-radius-xl" id="servicios">
+  </section>  
 
-        <div class="row text-center mb-5 mt-5" id="servicios">
-          <h2>SERVICIOS</h2>
-        </div>
-        <div class="row justify-content-center ">
-          <div class="col-md-3 position-relative">
-            <div class="p-3 text-center">
-              <a role="button" class="nav-link text-white opacity-10 text-sm cursor-pointer"
-                href="/pages/Servicios/TransportePersonal.html">
-                <img class="btn1" src="/assets/img/illustrations/TransportePersonal1.png" style="width: 150px;">
-                <h5 class="mt-3">Transporte de Personal</h5>
-              </a>
-            </div>
-            <hr class="vertical light">
-          </div>
-          <div class="col-md-3 position-relative">
-            <div class="p-3 text-center">
-              <a class="nav-link text-white opacity-10 text-sm" href="/pages/Servicios/TransporteResiduos.html">
-                <img class="btn1" src="/assets/img/illustrations/TransporteResiduos1.png" style="width: 150px;">
-                <h5 class="mt-3">Transporte de Residuos de Manejo Especial</h5>
-              </a>
-            </div>
-            <hr class="vertical light">
-          </div>
-          <div class="col-md-3 position-relative">
-            <div class="p-3 text-center">
-              <a class="nav-link text-white opacity-10 text-sm" href="/pages/Servicios/ObraCivil.html">
-                <img class="btn1" src="/assets/img/illustrations/ObraCivil1.png" style="width: 150px;">
-                <h5 class="mt-3">Obra Civil</h5>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-center ">
-          <div class="col-md-3 position-relative">
-            <div class="p-3 text-center">
-              <a class="nav-link text-white opacity-10 text-sm" href="/pages/Servicios/Mip.html">
-                <img class="btn1" src="/assets/img/illustrations/MIP.png" style="width: 150px;">
-                <h5 class="mt-3">Manejo Integral de Plagas</h5>
-              </a>
-            </div>
+    <!-- -------- START SECTION SERVICIOS ------- -->
+  <section class=" pb-8 mb-2 blurGlass  border-radius-xl " id="servicios" >
+    
+    <div class="row text-center mb-2 mt-4 pt-4">
+      <h2 data-aos="zoom-in" style="letter-spacing: 7px;">SERVICIOS</h2>
+    </div>
+    <div class="containerC ">
 
-          </div>
-          <div class="col-md-3 position-relative">
-            <div class="p-3 text-center">
-              <a class="nav-link text-white opacity-10 text-sm" href="/pages/Servicios/SeguridadPrivada.html">
-                <img class="btn1" src="/assets/img/illustrations/SeguridadPrivada1.png" style="width: 150px;">
-                <h5 class="mt-3">Seguridad Privada</h5>
-              </a>
-            </div>
-          </div>
 
-        </div>
-
+      <input type="radio" name="slider" class="d-none" id="s1" checked>
+      <input type="radio" name="slider" class="d-none" id="s2">
+      <input type="radio" name="slider" class="d-none" id="s3">
+      <input type="radio" name="slider" class="d-none" id="s4">
+      <input type="radio" name="slider" class="d-none" id="s5">
+  
+      <div class="cards pt-3 mt-3">
+        <label for="s1" id="slide1">
+          <div class="card">
+            <div class="image">
+              <img src="/assets/img/illustrations/IconoMIP.png" alt="" >                
+            </div>              
+            <a href="/pages/Servicios/Mip.html" class="btn-contact">Manejo Integral de Plagas, Sanitización y Cetrería</a>              
+          </div>
+        </label>
+  
+        <label for="s2" id="slide2">
+          <div class="card">
+            <div class="image">
+              <img src="/assets/img/illustrations/IconoSP.png" alt="">                
+            </div>              
+            <a href="/pages/Servicios/SeguridadPrivada.html" class="btn-contact">Seguridad Privada e Implementación de Sistemas Tecnológicos de Seguridad</a>              
+          </div>
+        </label>
+  
+        <label for="s3" id="slide3">
+          <div class="card">
+            <div class="image">
+              <img src="/assets/img/illustrations/IconoRME.png" alt="">                
+            </div>              
+            <a href="/pages/Servicios/TransporteResiduos.html" class="btn-contact">Recolección y Transporte de Residuos Peligrosos y de Manejo Especial</a>              
+          </div>
+        </label>
+  
+        <label for="s4" id="slide4">
+          <div class="card">
+            <div class="image">
+              <img src="/assets/img/illustrations/IconoTP.png" alt="">                
+            </div>              
+            <a href="/pages/Servicios/TransportePersonal.html" class="btn-contact">Transporte de personal</a>              
+          </div>
+        </label>
+  
+        <label for="s5" id="slide5">
+          <div class="card">
+            <div class="image">
+              <img src="/assets/img/illustrations/IconoPOC.png" alt="">                
+            </div>              
+            <a href="/pages/Servicios/ObraCivil.html" class="btn-contact">Ingeniería en Obra Civil y Manteniemiento de Instalaciones</a>              
+          </div>
+        </label>
       </div>
-    </section>
-    <section class="py-7">
-      <div class="container" id="cotizaciones">
-        <div class="row ">
-          <div class="col-lg-8 mx-auto text-center">
-            <div class="ms-3 mb-md-1">
-              <h2 class="text-white" data-aos="zoom-in">COTIZACIONES</h2>
-            </div>
+  
+    </div>
+</section>
+    
+<!-- -------- START SECTION COTIZACIONES ------- -->
+<section class=" pb-8 mb-5 blurGlass  border-radius-xl  " id="cotizaciones" >
+  <img src="/assets/img/shapes/SeccionCotizaciones3.png" alt="pattern-lines"
+      class="position-absolute start-0 top-0 w-100 h-100 opacity-5">
+    <div class="container" >        
+      <div class="row mb-2 mt-4 pt-4">
+        <div class="col-lg-8 mx-auto text-center">
+          <div class="ms-3 mb-md-1">
+            <h2 data-aos="zoom-in" style="letter-spacing: 8px;">COTIZACIONES</h2>
           </div>
         </div>
+      </div>
 
-        <div class="row justify-content-center blurGlass shadowSec border-radius-xl  z-index-1 border-topS">
-          <div class="row  mt-6"></div>
-          <div class=" col-lg-12 mx-auto">
-            <div class="card">
-              <div class="row">
-                <div class="col-lg-5 ">
-                  <img src="/assets/img/logos/LogoCormagoBlancoFull.png" style="width: 140px;">
-                  <div class="bg-dark mt-n5 mb-1 ms-lg-3 border-radius-md">
-                    <div class="card-body p-5 position-relative " style="height: 506px; display: block;" id="lema">
-                      <img src="/assets/img/illustrations/Lema3.png" alt="">
-                     </div>
-                    <div class="row mt-4 text-center">
-                      
-                    </div>
+      <div class="row justify-content-center">
+        
+        <div class=" col-lg-12  mx-auto">
+          <div class="card shadowSec blurGlass border-radius-xl">
+            <div class="row">
+              <div class="col-lg-5 d-flex justify-content-center align-items-center">
+                
+                  <!-- LEMA -->
+                  <div class=" position-relative " style="height: 550px; display: block;" id="lema">
+                    <img src="/assets/img/illustrations/FotoCotizaciones4.png" alt="" style="width: 450px; height: 550px;">
                   </div>
-                </div>
-                <div class="col-lg-7">
-                  <form id="contact-form" method="post" autocomplete="off">
-                    <div class="card-body position-relative">
-                      <div class="input-group input-group-static mb-4">
-                        <label>Perfil profesional</label>
-                        <input type="text" class="form-control" placeholder="Lic. Ing. C.P.">
-                      </div>
-                      <div class="row mt-4">
-                        <div class="col-md-6">
-                          <div class="input-group input-group-static mb-4">
-                            <label>Nombre</label>
-                            <input class="form-control" placeholder="Lucas" aria-label="First Name..." type="text">
-                          </div>
-                        </div>
-                        <div class="col-md-6 ps-2">
-                          <div class="input-group input-group-static mb-4">
-                            <label>Apellidos</label>
-                            <input type="text" class="form-control" placeholder="Jones" aria-label="Last Name...">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row mt-4">
-                        <div class="col-md-6">
-                          <div class="input-group input-group-static mb-4">
-                            <label>Empresa</label>
-                            <input class="form-control" placeholder="Cormago" aria-label="First Name..." type="text">
-                          </div>
-                        </div>
-                        <div class="col-md-6 ps-2">
-                          <div class="input-group input-group-static mb-4">
-                            <label>Cargo</label>
-                            <input type="text" class="form-control" placeholder="Gerente" aria-label="Last Name...">
-                          </div>
-                        </div>
-                      </div>
-                      <div>
+              </div>
+              <div class="col-lg-7">
+                <form id="contact-form" method="post" autocomplete="off">
+                  <div class="card-body position-relative">
+                    <div class="input-group input-group-static mb-4">
+                      <label>Perfil profesional</label>
+                      <input type="text" class="form-control" placeholder="Lic. Ing. C.P.">
+                    </div>
+                    <div class="row mt-4">
+                      <div class="col-md-6">
                         <div class="input-group input-group-static mb-4">
-                          <label>Correo electronico</label>
-                          <input type="email" class="form-control" placeholder="ej. lucas@email.com">
+                          <label>Nombre</label>
+                          <input class="form-control" placeholder="Lucas" aria-label="First Name..." type="text">
                         </div>
-                      </div>                     
+                      </div>
+                      <div class="col-md-6 ps-2">
+                        <div class="input-group input-group-static mb-4">
+                          <label>Apellidos</label>
+                          <input type="text" class="form-control" placeholder="Jones" aria-label="Last Name...">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mt-4">
+                      <div class="col-md-6">
+                        <div class="input-group input-group-static mb-4">
+                          <label>Empresa</label>
+                          <input class="form-control" placeholder="Cormago" aria-label="First Name..." type="text">
+                        </div>
+                      </div>
+                      <div class="col-md-6 ps-2">
+                        <div class="input-group input-group-static mb-4">
+                          <label>Cargo</label>
+                          <input type="text" class="form-control" placeholder="Gerente" aria-label="Last Name...">
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="input-group input-group-static mb-4">
+                        <label>Correo electrónico</label>
+                        <input type="email" class="form-control" placeholder="ej. lucas@email.com">
+                      </div>
+                    </div>
                     
-                      <!-- FORMULARIO MIP -->
-                      <div class="mt-4" id="form4" >
+                    <!-- FORMULARIO OBRA CIVIL -->
+                    <div class="input-group input-group-static mt-4" id="form1" style="display:none">
+                      <label>Escribre de manera detallada tu requerimiento</label>
+                      <textarea name="message" class="form-control" id="message" rows="3"></textarea>
+                    </div>
+
+                    <!-- FORMULARIO MIP -->
+                    <div class="mt-4" id="form4" >
+                      <div class="row mt-4">
+                        <div class="col-md-6">
+                          <div class="input-group input-group-static mb-4">
+                            <label>Tipo de Inmueble</label>
+                            <div class="choices" data-type="select-one" tabindex="0" role="listbox"
+                              aria-haspopup="true" aria-expanded="false">
+                              <div class="choices__inner p-0">
+                                <select class="form-control choices__input p-2" name="choices-leave"
+                                  id="choices-leave" tabindex="-1" data-choice="active">
+                                  <option value="Choice 1">Oficinas</option>
+                                  <option value="Choice 1">Industria</option>
+                                  <option value="Choice 1">Hospital</option>
+                                  <option value="Choice 1">Dependencia federal</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6 ps-2">
+                          <div class="input-group input-group-static mb-4">
+                            <label>Dimensiones aproximadas en M²</label>
+                            <input type="number" class="form-control ps-3" aria-label="Phone Number" placeholder="1"
+                              min="1" max="100">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row mt-3 mb-4">
+                        <label>Controladores fijos</label>
+                        <div class="d-flex">
+                          <div class="form-check me-3 my-auto">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault2"
+                              id="flexRadioDefault6" onclick="myFunction()">
+                            <label class="form-check-label mb-0 ms-0" for="flexRadioDefault6">
+                              SI
+                            </label>
+                          </div>
+                          <div class="form-check me-3 my-auto">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault2" id="mipNo"
+                              onclick="myFunction()">
+                            <label class="form-check-label mb-0 ms-0" for="mipNo">
+                              No
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="formSi" style="display:none">
                         <div class="row mt-4">
+                          <div class="col-md-6 ps-2">
+                            <div class="input-group input-group-static mb-4">
+                              <label>¿Cuantos?</label>
+                              <input type="number" class="form-control ps-3" aria-label="Phone Number" placeholder="1"
+                                min="1" max="100">
+                            </div>
+                          </div>
                           <div class="col-md-6">
                             <div class="input-group input-group-static mb-4">
-                              <label>Tipo de Inmueble</label>
+                              <label>Horario</label>
                               <div class="choices" data-type="select-one" tabindex="0" role="listbox"
                                 aria-haspopup="true" aria-expanded="false">
                                 <div class="choices__inner p-0">
                                   <select class="form-control choices__input p-2" name="choices-leave"
                                     id="choices-leave" tabindex="-1" data-choice="active">
-                                    <option value="Choice 1">Oficinas</option>
-                                    <option value="Choice 1">Industria</option>
-                                    <option value="Choice 1">Hospital</option>
-                                    <option value="Choice 1">Dependencia federal</option>
+                                    <option value="8 Hrs">8 Hrs</option>
+                                    <option value="12 Hrs">12 hrs</option>
+
                                   </select>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          <div class="col-md-6 ps-2">
-                            <div class="input-group input-group-static mb-4">
-                              <label>Dimensiones aproximadas en M²</label>
-                              <input type="number" class="form-control ps-3" aria-label="Phone Number" placeholder="1"
-                                min="1" max="100">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row mt-3 mb-4">
-                          <label>Controladores fijos</label>
-                          <div class="d-flex">
-                            <div class="form-check me-3 my-auto">
-                              <input class="form-check-input" type="radio" name="flexRadioDefault2"
-                                id="flexRadioDefault6" onclick="myFunction()">
-                              <label class="form-check-label mb-0 ms-0" for="flexRadioDefault6">
-                                SI
-                              </label>
-                            </div>
-                            <div class="form-check me-3 my-auto">
-                              <input class="form-check-input" type="radio" name="flexRadioDefault2" id="mipNo"
-                                onclick="myFunction()">
-                              <label class="form-check-label mb-0 ms-0" for="mipNo">
-                                No
-                              </label>
-                            </div>
-                          </div>
-                        </div>
-                        <div id="formSi" style="display:none">
-                          <div class="row mt-4">
-                            <div class="col-md-6 ps-2">
-                              <div class="input-group input-group-static mb-4">
-                                <label>¿Cuantos?</label>
-                                <input type="number" class="form-control ps-3" aria-label="Phone Number" placeholder="1"
-                                  min="1" max="100">
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="input-group input-group-static mb-4">
-                                <label>Horario</label>
-                                <div class="choices" data-type="select-one" tabindex="0" role="listbox"
-                                  aria-haspopup="true" aria-expanded="false">
-                                  <div class="choices__inner p-0">
-                                    <select class="form-control choices__input p-2" name="choices-leave"
-                                      id="choices-leave" tabindex="-1" data-choice="active">
-                                      <option value="8 Hrs">8 Hrs</option>
-                                      <option value="12 Hrs">12 hrs</option>
-
-                                    </select>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row mt-3 mb-2">
-                          <label>Plagas a controlar</label>
-                          <div class="d-flex">
-                            <p class="text-white"> Base: (Hormigas, Ratones, Mosquitos)</p>
-                          </div>
-                        </div>
-                        <div class="row mt-2 mb-4">
-
-                          <div class="d-flex">
-                            <div class="form-check me-3 my-auto">
-                              <input class="form-check-input" type="checkbox" name="Seguridad6" value="" id="Plagas1">
-                              <label class="form-check-label mb-0 ms-0" for="Plagas1">
-                                Serpientes
-                              </label>
-                            </div>
-                            <div class="form-check me-3 my-auto">
-                              <input class="form-check-input" type="checkbox" name="Seguridad6" value="" id="Plagas2">
-                              <label class="form-check-label mb-0 ms-0" for="Plagas2">
-                                Murcielagos
-                              </label>
-                            </div>
-                            <div class="form-check me-3 my-auto">
-                              <input class="form-check-input" type="checkbox" name="Seguridad6" value="" id="Plagas3">
-                              <label class="form-check-label mb-0 ms-0" for="Plagas3">
-                                Abejas
-                              </label>
-                            </div>
-                            <div class="form-check me-3 my-auto">
-                              <input class="form-check-input" type="checkbox" name="Seguridad6" id="Plagas4">
-                              <label class="form-check-label mb-0 ms-0" for="Plagas4">
-                                Palomas
-                              </label>
-                            </div>
-                          </div>
-                          <div class="mt-3">
-                            <div class="input-group input-group-static mb-4">
-                              <label>Otros</label>
-                              <input type="text" class="form-control" placeholder="Favor de especificar">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="input-group input-group-static mt-4">
-                          <label>Mensaje</label>
-                          <textarea name="message" class="form-control" id="message" rows="3"></textarea>
                         </div>
                       </div>
-
-                      <div class="text-end mt-4">
-                        <button type="button" class="btn bg-gradient-dark mb-0">Enviar</button>
+                      <div class="row mt-3 mb-2">
+                        <label>Plagas a controlar</label>
+                        <div class="d-flex">
+                          <p class="text-white"> Base: (Hormigas, Ratones, Mosquitos)</p>
+                        </div>
                       </div>
+                      <div class="row mt-2 mb-4">
 
+                        <div class="d-flex">
+                          <div class="form-check me-3 my-auto">
+                            <input class="form-check-input" type="checkbox" name="Seguridad6" value="" id="Plagas1">
+                            <label class="form-check-label mb-0 ms-0" for="Plagas1">
+                              Serpientes
+                            </label>
+                          </div>
+                          <div class="form-check me-3 my-auto">
+                            <input class="form-check-input" type="checkbox" name="Seguridad6" value="" id="Plagas2">
+                            <label class="form-check-label mb-0 ms-0" for="Plagas2">
+                              Murcielagos
+                            </label>
+                          </div>
+                          <div class="form-check me-3 my-auto">
+                            <input class="form-check-input" type="checkbox" name="Seguridad6" value="" id="Plagas3">
+                            <label class="form-check-label mb-0 ms-0" for="Plagas3">
+                              Abejas
+                            </label>
+                          </div>
+                          <div class="form-check me-3 my-auto">
+                            <input class="form-check-input" type="checkbox" name="Seguridad6" id="Plagas4">
+                            <label class="form-check-label mb-0 ms-0" for="Plagas4">
+                              Palomas
+                            </label>
+                          </div>
+                        </div>
+                        <div class="mt-3">
+                          <div class="input-group input-group-static mb-4">
+                            <label>Otros</label>
+                            <input type="text" class="form-control" placeholder="Favor de especificar">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="input-group input-group-static mt-4">
+                        <label>Mensaje</label>
+                        <textarea name="message" class="form-control" id="message" rows="3"></textarea>
+                      </div>
                     </div>
-                  </form>
-                </div>
+                    <div class="text-end mt-4">
+                      <button type="button" class="btn bg-gradient-dark mb-0">Enviar</button>
+                    </div>
+
+                  </div>
+                </form>
               </div>
             </div>
           </div>
-          <div class="row  mt-6"></div>
-
         </div>
       </div>
-    </section>
+    </div>
+</section>
+
     <!-- -------- START FOOTER 7 w/ DARK BACKGROUND AND 3 COLUMNS ------- -->
     <footer class="footer py-5 my-1 bg-dark position-relative overflow-hidden">
       <img src="../../assets/img/shapes/waves-white.svg" alt="pattern-lines"
         class="position-absolute start-0 top-0 w-100 opacity-1">
       <div class="container position-relative">
-        <div class="row mr-0">
-          <div class="col-lg-4 me-8 my-auto text-lg-start">
-            <ul class="flex-column ms-lg-n3 nav">
-              <li class="nav-item">
-                <a class="nav-link text-white opacity-8 text-sm" href="/index.html" target="_blank">
-                  INICIO
+        <div class="row ">
+          <div class="col-lg-12 d-flex justify-content-between align-items-center">
+            <div class="col-lg-4  my-auto text-lg-start">
+              <ul class="flex-column ms-lg-n3 nav">
+                <li class="nav-item">
+                  <a class="nav-link text-white opacity-8 text-sm" href="/index.html">
+                    INICIO
+                  </a>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link text-white opacity-8 text-sm" href="#empresa">
+                    EMPRESA
+                  </a>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link text-white opacity-8 text-sm" href="#servicios">
+                    SERVICIOS
+                  </a>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link text-white opacity-8 text-sm" href="https://www.facebook.com/cormago"
+                    target="_blank">
+                    FACEBOOK
+                  </a>
+                </li>
+  
+              </ul>
+  
+            </div>
+            <div class="col-lg-4   my-auto text-center text-lg-center">
+  
+              <p class="text-white">Esq. calle Huixtla y Escuintla SN, Fraccionamiento "Las Flores", </br>
+                C.P. 30797
+                Tapachula, Chiapas.
+              </p>
+  
+              <p class="text-white">962 696 1664
+              </p>
+  
+              <p class="text-white">contacto@cormago.com.mx
+              </p>
+  
+            </div>
+            <div class="col-lg-4    text-lg-end">
+              <div>
+                <a class="nav-link text-white opacity-8 text-sm" href="javascript:;" target="_blank">
+                  <img src="/assets/img/logos/LogoHyvecode.png" style="width: 180px;">
                 </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-white opacity-8 text-sm" href="/pages/blog/Historia.html" target="_blank">
-                  EMPRESA
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-white opacity-8 text-sm" href="#servicios" target="_blank">
-                  SERVICIOS
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-white opacity-8 text-sm" href="https://www.facebook.com/cormago"
-                  target="_blank">
-                  FACEBOOK
-                </a>
-              </li>
-
-            </ul>
-
+              </div>
+            </div>
           </div>
-          <div class="col-lg-4 me-2 my-auto text-lg-center align-items-center">
+          
 
-            <p class="text-white">Esq. calle Huixtla y Escuintla SN, Fraccionamiento "Las Flores", </br>
-              C.P. 30797
-              Tapachula, Chiapas.
-            </p>
-
-            <p class="text-white">962 696 1664
-            </p>
-
-            <p class="text-white">contacto@cormago.com.mx
-            </p>
-
-          </div>
-
-          <div class="col-lg-4 ms-7 my-auto text-lg-end">
-            <div>
-              <a class="nav-link text-white opacity-8 text-sm" href="javascript:;" target="_blank">
-                <img src="/assets/img/logos/HyveCode.png" style="width: 180px;">
+        </div>
+        <div class=" row mt-5 justify-content-center ">
+          <div class="col-lg-12 d-flex justify-content-center align-items-center">
+            <div class="col-lg-4  me-2 text-lg-end ">
+              <a class="nav-link text-white opacity-8 text-sm" href="/pages/privacy.html">
+                <h6>AVISO DE PRIVACIDAD</h6>
+              </a>
+            </div>
+            <div class="col-lg-1  text-lg-center" style="width: 10px">
+              <h6>|</h6>
+            </div>
+            <div class="col-lg-4 ms-2 text-lg-start">
+              <a class="nav-link text-white opacity-8  text-sm" href="/pages/terms.html">
+                <h6>TÉRMINOS Y CONDICIONES</h6>
               </a>
             </div>
           </div>
-
-        </div>
-        <div class=" row mt-5 justify-content-center align-items-center">
-          <div class="col-lg-3 text-lg-end">
-            <a class="nav-link text-white opacity-8 text-sm" href="/pages/privacy.html">
-              <h4>AVISO DE PRIVACIDAD</h4>
-            </a>
-          </div>
-          <div class="col-lg-1 text-lg-center" style="width: 35px">
-            <h1>|</h1>
-          </div>
-          <div class="col-lg-3 text-lg-start">
-            <a class="nav-link text-white opacity-8 text-sm" href="/pages/terms.html">
-              <h4>TERMINOS Y CONDICIONES</h4>
-            </a>
-          </div>
+          
         </div>
       </div>
-    </footer>
+  </footer>
   </div>
 
   <!-- -------- END FOOTER 5 w/ DARK BACKGROUND ------- -->
   <!--   Core JS Files   -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="/assets/js/map.js"></script>
   <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
   <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
   <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
@@ -726,56 +730,6 @@
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
   <script src="../../assets/js/material-kit-pro.min.js?v=3.0.3" type="text/javascript"></script>
-  <script>
-    function myFunction() {
-      
-      var checkBox6 = document.getElementById("flexRadioDefault6");
-      var checkBox7 = document.getElementById("residuo1");
-      var checkBox8 = document.getElementById("residuo4");
-      var checkBox9 = document.getElementById("residuo2");
-      var checkBox10 = document.getElementById("residuo3");
-
-     
-      var text6 = document.getElementById("formSi");
-      var text7 = document.getElementById("formRes");
-      var text8 = document.getElementById("formDes");
-      var text9 = document.getElementById("formRP");
-      var text10 = document.getElementById("formRPBI");
-
-    
-
-      if (checkBox6.checked == true) {
-        text6.style.display = "block";
-      } else {
-        text6.style.display = "none";
-      }
-
-      if (checkBox7.checked == true) {
-        text7.style.display = "block";
-      } else {
-        text7.style.display = "none";
-      }
-
-      if (checkBox8.checked == true) {
-        text8.style.display = "block";
-      } else {
-        text8.style.display = "none";
-      }
-
-      if (checkBox9.checked == true) {
-        text9.style.display = "block";
-      } else {
-        text9.style.display = "none";
-      }
-
-      if (checkBox10.checked == true) {
-        text10.style.display = "block";
-      } else {
-        text10.style.display = "none";
-      }
-      
-    }
-  </script>
 </body>
 
 </html>

@@ -1,15 +1,4 @@
-<!--
-=========================================================
-* Material Kit 2 PRO - v3.0.3
-=========================================================
 
-* Product Page:  https://www.creative-tim.com/product/material-kit-pro 
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Coded by www.creative-tim.com
-
- =========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 
@@ -26,6 +15,9 @@
   <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   <link rel="stylesheet" type="text/css"
     href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <!-- Nucleo Icons -->
   <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
   <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
@@ -37,17 +29,15 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link id="pagestyle" href="./assets/css/material-kit-pro.css?v=3.0.3" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
 </head>
 
 <body class="presentation-page bg-dark">
   <!-- Navbar -->
-  <div class="container">
-
-    <div class="row">
-      <div class="col-12">
-        <nav
-          class="navbar navbar-expand-lg   border-radius-xl top-0 z-index-3 shadow position-absolute my-3 py-2 start-5 end-6 mx-4 navbar-transparent">
-          <div class="container-fluid px-0">
+  <nav
+          class="navbar navbar-expand-lg  blur border-radius-xl top-0 z-index-sticky shadow position-sticky my-2 py-1 start-0 end-0 ">
+          <div class="container">
             <a class="navbar-brand font-weight-bolder ms-sm-3  d-none d-md-block" href="/index.html" rel="tooltip"
               title="Designed and Coded by Creative Tim" data-placement="bottom">
               <img src="./assets/img/logos/LogoCormagoBlancoFull.png" style="width: 140px;">
@@ -180,13 +170,13 @@
                         <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
                           <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
                             id="dropdownSignUp" href="./pages/blog/Mision.html">
-                            <span>Mision</span>
+                            <span>Misión</span>
                           </a>
                         </li>
                         <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
                           <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
                             id="dropdownPasswordReset" href="./pages/blog/Vision.html">
-                            <span>Vision</span>
+                            <span>Visión</span>
                           </a>
                         </li>
                         <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
@@ -198,7 +188,7 @@
                         <li class="nav-item list-group-item border-0 p-0">
                           <a href="./pages/blog/Proposito.html"
                             class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
-                            <span>Proposito</span>
+                            <span>Propósito</span>
                           </a>
                         </li>
                       </ul>
@@ -215,13 +205,13 @@
                           <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
                             <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
                               id="dropdownSignUp" href="./pages/blog/Mision.html">
-                              <span>Mision</span>
+                              <span>Misión</span>
                             </a>
                           </li>
                           <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
                             <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
                               id="dropdownPasswordReset" href="./pages/blog/Vision.html">
-                              <span>Vision</span>
+                              <span>Visión</span>
                             </a>
                           </li>
                           <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
@@ -233,7 +223,7 @@
                           <li class="nav-item list-group-item border-0 p-0">
                             <a href="./pages/blog/Proposito.html"
                               class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
-                              <span>Proposito</span>
+                              <span>Propósito</span>
                             </a>
                           </li>
                         </ul>
@@ -258,35 +248,34 @@
                       <ul class="list-group w-100">
                         <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
                           <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                            id="dropdownSignIn" href="./pages/Servicios/TransportePersonal.html">
-                            <span>Transporte de personal</span>
-                          </a>
-                        </li>
-                        <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                          <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                            id="dropdownSignUp" href="./pages/Servicios/TransporteResiduos.html">
-                            <span>Transporte de residuos</span>
-                          </a>
-                        </li>
-                        <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                          <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
                             id="dropdownPasswordReset" href="/pages/Servicios/Mip.html">
-                            <span>Manejo Integral de Plagas</span>
-                          </a>
-                        </li>
-                        <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                          <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                            id="dropdownError" href="./pages/Servicios/ObraCivil.html">
-                            <span>Obra civil</span>
+                            <span>Manejo integral de plagas, sanitización y cetrería</span>
                           </a>
                         </li>
                         <li class="nav-item list-group-item border-0 p-0">
                           <a href="./pages/Servicios/SeguridadPrivada.html"
                             class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
-                            <span>Seguridad privada</span>
+                            <span>Seguridad privada e Implementación de </br> sistemas tecnológicos de seguridad</span>
                           </a>
                         </li>
-
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                          <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                            id="dropdownSignUp" href="./pages/Servicios/TransporteResiduos.html">
+                            <span>Recolección y transporte de residuos peligrosos </br> y de manejo especial </span>
+                          </a>
+                        </li>
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                          <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                            id="dropdownSignIn" href="./pages/Servicios/TransportePersonal.html">
+                            <span>Transporte de personal</span>
+                          </a>
+                        </li>                       
+                        <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                          <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                            id="dropdownError" href="./pages/Servicios/ObraCivil.html">
+                            <span>Ingeniería en obra civil y </br> manteniemiento de instalaciones</span>
+                          </a>
+                        </li>
                       </ul>
                     </div>
                     <div class="row d-lg-none">
@@ -294,35 +283,34 @@
                         <ul class="list-group w-100">
                           <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
                             <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                              id="dropdownSignIn" href="./pages/Servicios/TransportePersonal.html">
-                              <span>Transporte de personal</span>
-                            </a>
-                          </li>
-                          <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                            <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                              id="dropdownSignUp" href="./pages/Servicios/TransporResiduos.html">
-                              <span>Transporte de residuos</span>
-                            </a>
-                          </li>
-                          <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                            <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
                               id="dropdownPasswordReset" href="/pages/Servicios/Mip.html">
-                              <span>Manejo Integral de Plagas</span>
-                            </a>
-                          </li>
-                          <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
-                            <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
-                              id="dropdownError" href="./pages/Servicios/ObraCivil.html">
-                              <span>Obra civil</span>
+                              <span>Manejo integral de plagas, sanitización y cetrería</span>
                             </a>
                           </li>
                           <li class="nav-item list-group-item border-0 p-0">
                             <a href="./pages/Servicios/SeguridadPrivada.html"
                               class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1">
-                              <span>Seguridad privada</span>
+                              <span>Seguridad privada e Implementación de </br> sistemas tecnológicos de seguridad</span>
                             </a>
                           </li>
-
+                          <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                            <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                              id="dropdownSignUp" href="./pages/Servicios/TransporteResiduos.html">
+                              <span>Recolección y transporte de residuos peligrosos </br> y de manejo especial </span>
+                            </a>
+                          </li>
+                          <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                            <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                              id="dropdownSignIn" href="./pages/Servicios/TransportePersonal.html">
+                              <span>Transporte de personal</span>
+                            </a>
+                          </li>                       
+                          <li class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0">
+                            <a class="dropdown-item border-radius-md text-dark ps-3 d-flex align-items-center mb-1"
+                              id="dropdownError" href="./pages/Servicios/ObraCivil.html">
+                              <span>Ingeniería en obra civil y </br> manteniemiento de instalaciones</span>
+                            </a>
+                          </li>
                         </ul>
                         </a>
                       </div>
@@ -340,282 +328,240 @@
               </ul>
             </div>
           </div>
-        </nav>
-        <!-- End Navbar -->
-      </div>
-    </div>
-  </div>
-  <div
-    class="containerIntro align-items-center justify-content-center animate__animated animate__fadeOutTopLeft animate__delay-2s animate__slower"
-    style="background-image: url('./assets/img/logos/IntroWeb.png')" loading="lazy">
-    <img src="./assets/img/logos/LogoCormagoBlancoFull.png" alt="cormago" style="width: 1272px; ">
-  </div>
-  <header class="header-2">
-    <div class="page-header min-vh-100" style="background-image: url('./assets/img/logos/HeaderCormago.png')"
-      loading="lazy">
-      <span class="mask bg-dark opacity-5"></span>
-      <div class="container">
-        <div class="row pb-4 mb-4 justify-content-between">
-
-          <div class="col-lg-5  align-items-center d-flex flex-column pt-8">
-
-            <div class="progress-bar bg-warning mb-3" role="progressbar" style="width: 50%" aria-valuenow="50"
-              aria-valuemin="0" aria-valuemax="50"></div>
-            <p class="card-description text-white text-justify" style="font-size: large;">
-              Somos una empresa mexicana dedicada a ofrecer
-              soluciones especializadas en servicios industriales,
-              que trabaja bajo altos estándares de calidad, seguridad
-              y salud ocupacional, en conjunto con personal altamente
-              calificado y certificado para satisfacer sus necesidades
-              en beneficio de la imagen y seguridad de su empresa.
-            </p>
-            <div class="progress-bar bg-warning mb-3" role="progressbar" style="width: 50%" aria-valuenow="50"
-              aria-valuemin="0" aria-valuemax="50"></div>
-          </div>
-          <div class="col-lg-6 pb-4">
-            <div class="card card-raised page-carousel">
-              <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                    aria-label="Slide 4"></button>
-                  
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="d-block img-fluid" src="./assets/img/illustrations/Cormago/F1.png" alt="First slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block img-fluid" src="./assets/img/illustrations/Cormago/F3.png" alt="Third slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block img-fluid" src="./assets/img/illustrations/Cormago/F4.png" alt="Fourth slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block img-fluid" src="./assets/img/illustrations/Cormago/F5.png" alt="Fifth slide">
-                  </div>
-                </div>
-                <button class="left carousel-control carousel-control-prev" type="button"
-                  data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="fa fa-angle-left"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="right carousel-control carousel-control-next" type="button"
-                  data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="fa fa-angle-right"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+  </nav>
+  <!-- End Navbar -->
+      
+    <!-- -------- DESCRIPCION CORMAGO------- -->
+  <section class="border-radius-xl" id="descripcion" >
+          <div class="parallax min-vh-80">
+            
+            <div class="row  justify-content-center blurDesc">
+              <div class="divisor mb-5 position-relative"></div>
+              <div class="col-md-9 position-relative">                
+                  <p class="pPrincipal text-white text-center">
+                    Somos una empresa mexicana dedicada a ofrecer
+                    soluciones especializadas en servicios industriales,
+                    que trabaja bajo altos estándares de calidad, seguridad
+                    y salud ocupacional, en conjunto con personal altamente
+                    calificado y certificado para satisfacer sus necesidades
+                    en beneficio de la imagen y seguridad de su empresa.
+                  </p>                  
               </div>
-            </div>
+              <p class="divisor mt-4 pb-0 mb-0 position-relative" ></p>
+            </div>                        
           </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <div class="card card-body blur shadow border-topS mx-3 mx-md-4 mt-n6">
+  </section>
+    
     <!-- -------- START SECTION SERVICIOS ------- -->
-    <section class="pt-5 mt-5 pb-8" id="servicios">
-      <div class="row text-center mb-2 mt-1">
-        <h2 data-aos="zoom-in">SERVICIOS</h2>
+  <section class=" pb-8 mb-2 blurGlass  border-radius-xl " id="servicios" >
+    
+      <div class="row text-center mb-2 mt-4 pt-4">
+        <h2 data-aos="zoom-in" style="letter-spacing: 7px;">SERVICIOS</h2>
       </div>
-      <div class="container  blurGlass shadowSec border-radius-xl  z-index-1 border-topS">
-        <div class="row justify-content-center mb-5 mt-5">
-          <div class="col-md-3 position-relative">
-            <div class="p-3 text-center">
-              <a role="button" class="nav-link text-white opacity-10 text-sm cursor-pointer "
-                href="./pages/Servicios/TransportePersonal.html">
-                <img class="btn1" src="./assets/img/illustrations/TransportePersonal1.png" style="width: 150px;">
-                <h5 class="mt-3">Transporte de Personal</h5>
-              </a>
+      <div class="containerC ">
+
+
+        <input type="radio" name="slider" class="d-none" id="s1" checked>
+        <input type="radio" name="slider" class="d-none" id="s2">
+        <input type="radio" name="slider" class="d-none" id="s3">
+        <input type="radio" name="slider" class="d-none" id="s4">
+        <input type="radio" name="slider" class="d-none" id="s5">
+    
+        <div class="cards pt-3 mt-3">
+          <label for="s1" id="slide1">
+            <div class="card">
+              <div class="image">
+                <img src="./assets/img/illustrations/IconoMIP.png" alt="" >                
+              </div>              
+              <a href="./pages/Servicios/Mip.html" class="btn-contact">Manejo Integral de Plagas, Sanitización y Cetrería</a>              
             </div>
-            <hr class="vertical light">
-          </div>
-          <div class="col-md-3 position-relative">
-            <div class="p-3 text-center">
-              <a class="nav-link text-white opacity-10 text-sm" href="./pages/Servicios/TransporteResiduos.html">
-                <img class="btn1" src="./assets/img/illustrations/TransporteResiduos1.png" style="width: 150px;">
-                <h5 class="mt-3">Transporte de Residuos de Manejo Especial</h5>
-              </a>
+          </label>
+    
+          <label for="s2" id="slide2">
+            <div class="card">
+              <div class="image">
+                <img src="./assets/img/illustrations/IconoSP.png" alt="">                
+              </div>              
+              <a href="./pages/Servicios/SeguridadPrivada.html" class="btn-contact">Seguridad Privada e Implementación de Sistemas Tecnológicos de Seguridad</a>              
             </div>
-            <hr class="vertical light">
-          </div>
-          <div class="col-md-3 position-relative">
-            <div class="p-3 text-center">
-              <a class="nav-link text-white opacity-10 text-sm" href="./pages/Servicios/ObraCivil.html">
-                <img class="btn1" src="./assets/img/illustrations/ObraCivil1.png" style="width: 150px;">
-                <h5 class="mt-3">Obra Civil</h5>
-              </a>
+          </label>
+    
+          <label for="s3" id="slide3">
+            <div class="card">
+              <div class="image">
+                <img src="./assets/img/illustrations/IconoRME.png" alt="">                
+              </div>              
+              <a href="./pages/Servicios/TransporteResiduos.html" class="btn-contact">Recolección y Transporte de Residuos Peligrosos y de Manejo Especial</a>              
             </div>
-          </div>
+          </label>
+    
+          <label for="s4" id="slide4">
+            <div class="card">
+              <div class="image">
+                <img src="./assets/img/illustrations/IconoTP.png" alt="">                
+              </div>              
+              <a href="./pages/Servicios/TransportePersonal.html" class="btn-contact">Transporte de personal</a>              
+            </div>
+          </label>
+    
+          <label for="s5" id="slide5">
+            <div class="card">
+              <div class="image">
+                <img src="./assets/img/illustrations/IconoPOC.png" alt="">                
+              </div>              
+              <a href="./pages/Servicios/ObraCivil.html" class="btn-contact">Ingeniería en Obra Civil y Manteniemiento de Instalaciones</a>              
+            </div>
+          </label>
         </div>
-        <div class="row justify-content-center mb-2 pb-5">
-          <div class="col-md-3 position-relative">
-            <div class="p-3 text-center">
-              <a class="nav-link text-white opacity-10 text-sm" href="./pages/Servicios/Mip.html">
-                <img class="btn1" src="./assets/img/illustrations/MIP.png" style="width: 150px;">
-                <h5 class="mt-3">Manejo Integral de Plagas</h5>
-              </a>
-            </div>
-
-          </div>
-          <div class="col-md-3 position-relative">
-            <div class="p-3 text-center">
-              <a class="nav-link text-white opacity-10 text-sm" href="./pages/Servicios/SeguridadPrivada.html">
-                <img class="btn1" src="./assets/img/illustrations/SeguridadPrivada1.png" style="width: 150px;">
-                <h5 class="mt-3">Seguridad Privada</h5>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-
+    
       </div>
-    </section>
+  </section>
 
-    <div class="progress mb-3 justify-content-center">
-      <img src="./assets/img/shapes/Separador2.png" alt="" style="height: 37px;">
-    </div>
-    <!-- -------- START SECTION EMPRESA ------- -->
-    <section class="pt-5 mt-5 pb-8" id="empresa">
-      <div class="row text-center mb-2 mt-1">
-        <h2 data-aos="zoom-in">EMPRESA</h2>
+    <!-- -------- START SECTION EMPRESAS ------- -->
+  <section class=" pb-8 mb-2 blurGlass  border-radius-xl " id="empresa">
+      <div class="row text-center mb-2 mt-4 pt-4">
+        <h2 data-aos="zoom-in" style="letter-spacing: 7px;">EMPRESA</h2>
       </div>
-      <div class="container  blurGlass shadowSec border-radius-xl  z-index-1 border-topS">
+      <div class="containerC ">
 
 
-        <div class="row justify-content-center mb-5 mt-5">
-          <div class="col-md-3 position-relative">
-            <div class="p-3 text-center">
-              <a role="button" class="nav-link text-white opacity-10 text-sm cursor-pointer"
-                href="./pages/blog/Historia.html">
-                <img class="btn1" src="./assets/img/illustrations/Historia1.png" style="width: 150px;">
-                <h5 class="mt-3">Historia</h5>
-              </a>
+        <input type="radio" name="slider2" class="d-none" id="s11" checked>
+        <input type="radio" name="slider2" class="d-none" id="s22">
+        <input type="radio" name="slider2" class="d-none" id="s33">
+        <input type="radio" name="slider2" class="d-none" id="s44">
+        <input type="radio" name="slider2" class="d-none" id="s55">
+    
+        <div class="cards pt-3 mt-3">
+          <label for="s11" id="slide11">
+            <div class="card">
+              <div class="image">
+                <img src="./assets/img/illustrations/IconoHistoria.png" alt="" >                
+              </div>              
+              <a href="./pages/Servicios/Mip.html" class="btn-contact2">Historia</a>              
             </div>
-            <hr class="vertical light">
-          </div>
-          <div class="col-md-3 position-relative">
-            <div class="p-3 text-center">
-              <a role="button" class="nav-link text-white opacity-10 text-sm cursor-pointer"
-                href="./pages/blog/Mision.html">
-                <img class="btn1" src="./assets/img/illustrations/Mision1.png" style="width: 150px;">
-                <h5 class="mt-3">Misión</h5>
-              </a>
+          </label>
+    
+          <label for="s22" id="slide22">
+            <div class="card">
+              <div class="image">
+                <img src="./assets/img/illustrations/IconoMision.png" alt="">                
+              </div>              
+              <a href="./pages/Servicios/SeguridadPrivada.html" class="btn-contact2">Misión</a>              
             </div>
-            <hr class="vertical light">
-          </div>
-          <div class="col-md-3 position-relative">
-            <div class="p-3 text-center">
-              <a role="button" class="nav-link text-white opacity-10 text-sm cursor-pointer"
-                href="./pages/blog/Vision.html">
-                <img class="btn1" src="./assets/img/illustrations/Vision1.png" style="width: 150px;">
-                <h5 class="mt-3">Visión</h5>
-              </a>
+          </label>
+    
+          <label for="s33" id="slide33">
+            <div class="card">
+              <div class="image">
+                <img src="./assets/img/illustrations/IconoVision.png" alt="">                
+              </div>              
+              <a href="./pages/Servicios/TransporteResiduos.html" class="btn-contact2">Visión</a>              
             </div>
-          </div>
+          </label>
+    
+          <label for="s44" id="slide44">
+            <div class="card">
+              <div class="image">
+                <img src="./assets/img/illustrations/IconoCreencias.png" alt="">                
+              </div>              
+              <a href="./pages/Servicios/TransportePersonal.html" class="btn-contact2">Creencias</a>              
+            </div>
+          </label>
+    
+          <label for="s55" id="slide55">
+            <div class="card">
+              <div class="image">
+                <img src="./assets/img/illustrations/IconoProposito.png" alt="">                
+              </div>              
+              <a href="./pages/Servicios/ObraCivil.html" class="btn-contact2">Propósito</a>              
+            </div>
+          </label>
         </div>
-        <div class="row justify-content-center mb-2 pb-4">
-          <div class="col-md-3 position-relative">
-            <div class="p-3 text-center">
-              <a role="button" class="nav-link text-white opacity-10 text-sm cursor-pointer"
-                href="./pages/blog/Creencias.html">
-                <img class="btn1" src="./assets/img/illustrations/Creencias1.png" style="width: 150px;">
-                <h5 class="mt-3">Creencias</h5>
-              </a>
-            </div>
-
-          </div>
-          <div class="col-md-3 position-relative">
-            <div class="p-3 text-center">
-              <a role="button" class="nav-link text-white opacity-10 text-sm cursor-pointer"
-                href="./pages/blog/Proposito.html">
-                <img class="btn1" src="./assets/img/illustrations/Proposito1.png" style="width: 150px;">
-                <h5 class="mt-3">Proposito</h5>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
+    
       </div>
-    </section>
+  </section>
 
-    <div class="progress mb-3 justify-content-center">
-      <img src="./assets/img/shapes/Separador2.png" alt="" style="height: 37px;">
-    </div>
     <!-- -------- START SECTION CLIENTES ------- -->
-    <section class="pt-5 mt-5 pb-8" id="clientes">
-      <div class="row text-center mb-2 mt-1" >
-        <h2 data-aos="zoom-in">CLIENTES</h2>
+  <section class="pb-8 mb-2 blurGlass  border-radius-xl  " id="clientes">
+      <div class="row text-center mb-4 mt-4 pt-4">
+        <h2 data-aos="zoom-in" style="letter-spacing: 8px;">CLIENTES</h2>
       </div>
-      <div class="container mb-0 blurGlass shadowSec border-radius-xl  z-index-1 border-topS bg-white" >
+      <div class="container">
 
         <div class="row justify-content-center  mt-0">
 
-          <div class="col-lg-4 ms-1 me-1 p-lg-4 mt-lg-0 mt-4 align-items-center">
-            <img src="./assets/img/clientes/LogoSuKarne.jpg ">
+          <div class="col-lg-4 ms-1 me-2 p-lg-4 mt-lg-0 mt-4 align-items-center">
+            <button class="btnClient">
+              <img src="./assets/img/clientes/LogoCiSuKarne.png ">
+            </button>            
+          </div>
+          <div class="col-lg-4 ms-0 me-2 p-lg-4 mt-lg-0 mt-4">
+            <button class="btnClient">
+              <img src="./assets/img/clientes/LogoCiPuerto.png" >
+            </button>            
           </div>
           <div class="col-lg-4 ms-0 me-0 p-lg-4 mt-lg-0 mt-4">
-            <img src="./assets/img/clientes/LogoPuertoChiapas.jpg">
-          </div>
-          <div class="col-lg-4 ms-0 me-0 p-lg-4 mt-lg-0 mt-4">
-            <img src="./assets/img/clientes/LogoProcesa.jpg">
+            <button class="btnClient">
+              <img src="./assets/img/clientes/LogoCiProcesa.png">
+            </button>            
           </div>
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-4 ms-1 me-1 p-lg-4 mt-lg-0 mt-4 align-items-center">
-            <img src="./assets/img/clientes/LogoWalmart.jpg ">
+            <button class="btnClient">
+              <img src="./assets/img/clientes/LogoCiWalmart.png ">
+            </button>            
           </div>
           <div class="col-lg-4 ms-0 me-0 p-lg-4 mt-lg-0 mt-4">
-            <img src="./assets/img/clientes/LogoChedraui.jpg">
+            <button class="btnClient">
+              <img src="./assets/img/clientes/LogoCiChedraui.png">
+            </button>            
           </div>
           <div class="col-lg-4 ms-0 me-0 p-lg-4 mt-lg-0 mt-4">
-            <img src="./assets/img/clientes/LogoBioPapel.jpg">
+            <button class="btnClient">
+              <img src="./assets/img/clientes/LogoCiBioPapel.png">
+            </button>            
           </div>
         </div>
         <div class="row justify-content-center ">
           <div class="col-lg-4 ms-1 me-1 p-lg-4 mt-lg-0 mt-4 align-items-center">
-            <img src="./assets/img/clientes/LogoGrupoGramosa.jpg">
+            <button class="btnClient">
+              <img src="./assets/img/clientes/LogoCiGramosa.png">
+            </button>            
           </div>
           <div class="col-lg-4 ms-0 me-0 p-lg-4 mt-lg-0 mt-4">
-            <img src="./assets/img/clientes/LogoIMSS.jpg">
+            <button class="btnClient">
+              <img src="./assets/img/clientes/LogoCiImss.png">
+            </button>            
           </div>
           <div class="col-lg-4 ms-0 me-0 p-lg-4 mt-lg-0 mt-4">
-            <img src="./assets/img/clientes/LogoGrupoHerdez.jpg">
+            <button class="btnClient">
+              <img src="./assets/img/clientes/LogoCiHerdez.png">
+            </button>            
           </div>
 
         </div>
       </div>
-    </section>
+  </section>
 
-    <div class="progress mb-3 justify-content-center">
-      <img src="./assets/img/shapes/Separador2.png" alt="" style="height: 37px;">
-    </div>
     <!-- -------- START SECTION CONTACT0 ------- -->
-    <section class="pt-5 mt-5 pb-7" id="contacto">      
-      <div class="row text-center mb-2 mt-1">
-        <h2 data-aos="zoom-in">CONTACTANOS</h2>
+  <section class="pb-5 mb-2 blurGlass  border-radius-xl " id="contacto">    
+      <div class="row text-center mb-2 mt-4 pt-4">
+        <h2 data-aos="zoom-in" style="letter-spacing: 8px;">CONTÁCTANOS</h2>
       </div>
-      <div class="container mb-0 blurGlass shadowSec border-radius-xl  z-index-1 border-topS">
+      <div class="container">
 
         <div class="row justify-content-center mt-2">
-          <div class="col-lg-4 ms-0 me-8 p-lg-4 mt-lg-0 mt-4">
+          <div class="col-lg-5 d-flex justify-content-end">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.6935611763297!2d-92.28139070531307!3d14.866785981355338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x858e0fbdaae943fd%3A0x232743f18fb36394!2sCORMAGO%20S.A%20DE%20C.V!5e0!3m2!1ses-419!2smx!4v1679678715854!5m2!1ses-419!2smx"
               width="550" height="340" style="border:1;" allowfullscreen="" loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-          <div class="col-lg-4 ms-8 me-0 p-lg-4 mt-lg-0 mt-4">
+          <div class="col-lg-4 justify-content-center align-items-center">
             <div class="row justify-content-center text-center">
               <img src="./assets/img/logos/Ubicacion.png" style="width: 74px;">
-              <p class="text-white">Esq. calle Huixtla y Escuintla SN, Fraccionamiento las Flores. </br>
+              <p class="text-white">Esq. calle Huixtla y Escuintla SN,</br> Fraccionamiento las Flores. </br>
                 C.P. 30797</br>
                 Tapachula, Chiapas.
               </p>
@@ -632,141 +578,52 @@
             </div>
           </div>
         </div>
-        <div class="page-header py-6 py-md-5 my-sm-3 mb-3 border-radius-xl"
-          style="background-image: url('./assets/img/illustrations/UbicacionClip.png'); " loading="lazy">
-          <span class="mask bg-gradient-dark opacity-7"></span>
-          <div class="container">
-            <div class="row text-center mb-3">
-              <h4 class="text-white">TENEMOS PRESENCIA EN</h4>
-            </div>
-            <div class="row justify-content-center text-center">
-              <div class="col-lg-2 ms-0 me-0 p-lg-3 mt-lg-0 mt-3 align-items-center" style="width: 132px;">
-                <a class="nav-link text-white opacity-8 text-sm" href="#modal1">
-                  <img src="./assets/img/logos/ubicacion1.png" style="width: 35px;">
-                  <p class="text-white"></br>YUCATAN</p>
-                </a>
-                <div class="container-all" id="modal1">
-                  <div class="popup">
-                    <iframe class="map"
-                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3723.15028037628!2d-89.6412115!3d21.0666592!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5671b4df7dd0ad%3A0x6de640206bc83c5!2sParque%20Industrial%20Yucat%C3%A1n!5e0!3m2!1ses-419!2smx!4v1679685412646!5m2!1ses-419!2smx"
-                      width="800" height="500" style="border:1;" allowfullscreen="" loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                    <a href="#contacto" class="btn-close-popup">X</a>
-                  </div>
-                </div>
-
-              </div>
-              <div class="col-lg-2 ms-0 me-0 p-lg-3 mt-lg-0 mt-3 align-items-center" style="width: 132px;">
-                <a class="nav-link text-white opacity-8 text-sm" href="#modal2">
-                  <img src="./assets/img/logos/ubicacion1.png" style="width: 35px;">
-                  <p class="text-white"></br>CHIAPAS</p>
-                </a>
-                <div class="container-all" id="modal2">
-                  <div class="popup">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2687.6935611763297!2d-92.28139070531307!3d14.866785981355338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x858e0fbdaae943fd%3A0x232743f18fb36394!2sCORMAGO%20S.A%20DE%20C.V!5e0!3m2!1ses-419!2smx!4v1679678715854!5m2!1ses-419!2smx"
-                      width="800" height="500" style="border:1;" allowfullscreen="" loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                    <a href="#contacto" class="btn-close-popup">X</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-2 ms-0 me-0 p-lg-3 mt-lg-0 mt-3 align-items-center" style="width: 132px;">
-                <a class="nav-link text-white opacity-8 text-sm" href="#modal3">
-                  <img src="./assets/img/logos/ubicacion1.png" style="width: 35px;">
-                  <p class="text-white"></br>TABASCO</p>
-                </a>
-                <div class="container-all" id="modal3">
-                  <div class="popup">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3820.779308411717!2d-93.0717918!3d16.7378599!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85ed27a52744830d%3A0xa7fc9f3e8d902b5!2sParque%20Industrial!5e0!3m2!1ses-419!2smx!4v1679687029076!5m2!1ses-419!2smx"
-                      width="800" height="500" style="border:1;" allowfullscreen="" loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                    <a href="#contacto" class="btn-close-popup">X</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-2 ms-0 me-0 p-lg-3 mt-lg-0 mt-3 align-items-center" style="width: 132px;">
-                <a class="nav-link text-white opacity-8 text-sm" href="#modal4">
-                  <img src="./assets/img/logos/ubicacion1.png" style="width: 35px;">
-                  <p class="text-white"></br>JALISCO</p>
-                </a>
-                <div class="container-all" id="modal4">
-                  <div class="popup">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d956086.8220825449!2d-103.4758824!3d20.599728!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842f4d2ea764e02b%3A0x4132758f6fcd32bb!2sparque%20industrial%20guadalajara!5e0!3m2!1ses-419!2smx!4v1679687155174!5m2!1ses-419!2smx"
-                      width="800" height="500" style="border:1;" allowfullscreen="" loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                    <a href="#contacto" class="btn-close-popup">X</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-2 ms-0 me-0 p-lg-3 mt-lg-0 mt-3 align-items-center" style="width: 132px;">
-                <a class="nav-link text-white opacity-8 text-sm" href="#modal5">
-                  <img src="./assets/img/logos/ubicacion1.png" style="width: 35px;">
-                  <p class="text-white"></br>NAYARIT</p>
-                </a>
-                <div class="container-all" id="modal5">
-                  <div class="popup">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d554008.0761057729!2d-104.79399271287652!3d21.22178540974595!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8427373c3dda5dcd%3A0x7e2fea07d27d613e!2sParque%20Industrial%20Sin%20Referencia!5e0!3m2!1ses-419!2smx!4v1679687280151!5m2!1ses-419!2smx"
-                      width="800" height="500" style="border:0;" allowfullscreen="" loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                    <a href="#contacto" class="btn-close-popup">X</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="row text-center mb-3 mt-6">
+          <h5 class="text-white">TENEMOS PRESENCIA EN</h5>
+        </div>
+        <div class="border-radius-xl" id="map"></div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-2  align-items-center " style="width: 60px;">
+            <a class="nav-link text-white opacity-8 text-sm" href="https://www.facebook.com/cormago" target="_blank">
+              <img src="/assets/img/logos/LogoFacebook.png" style="width: 50px;">
+            </a>
+          </div>
+          <div class="col-lg-2 align-items-center " style="width:60px;">
+            <img src="/assets/img/logos/Instagram.png" style="width: 50px;">
+          </div>
+          <div class="col-lg-2 align-items-center " style="width:60px;">
+            <img src="/assets/img/logos/LogoTwiter.png" style="width: 50px;">
           </div>
         </div>
-        <div class="row mt-3 pt-3"></div>
       </div>
 
-      <div class="row justify-content-center mt-6">
-        <div class="col-lg-2  align-items-center " style="width: 60px;">
-          <a class="nav-link text-white opacity-8 text-sm" href="https://www.facebook.com/cormago" target="_blank">
-            <img src="/assets/img/logos/LogoFacebook.png" style="width: 50px;">
-          </a>          
-        </div>
-        <div class="col-lg-2 align-items-center " style="width:60px;">
-          <img src="/assets/img/logos/Instagram.png" style="width: 50px;">
-        </div>
-        <div class="col-lg-2 align-items-center " style="width:60px;">
-          <img src="/assets/img/logos/LogoTwiter.png" style="width: 50px;">
-        </div>
-      </div>
-    </section>
+      
+  </section>
 
-    <div class="progress mb-3 justify-content-center">
-      <img src="./assets/img/shapes/Separador2.png" alt="" style="height: 37px;">
-    </div>
+   
     <!-- -------- START SECTION COTIZACIONES ------- -->
-    <section class="pt-5 mt-5 pb-8" id="cotizaciones">
-      <div class="container" >
-        <div class="row ">
+  <section class=" pb-8 mb-5 blurGlass  border-radius-xl  " id="cotizaciones" >
+    <img src="./assets/img/shapes/SeccionCotizaciones3.png" alt="pattern-lines"
+        class="position-absolute start-0 top-0 w-100 h-100 opacity-5">
+      <div class="containerD" >        
+        <div class="row mb-2 mt-4 pt-4">
           <div class="col-lg-8 mx-auto text-center">
             <div class="ms-3 mb-md-1">
-              <h2 class="text-white" data-aos="zoom-in">COTIZACIONES</h2>
+              <h2 data-aos="zoom-in" style="letter-spacing: 8px;">COTIZACIONES</h2>
             </div>
           </div>
         </div>
 
-        <div class="row justify-content-center blurGlass shadowSec border-radius-xl  z-index-1 border-topS">
-          <div class="row  mt-6"></div>
-          <div class=" col-lg-12 mx-auto">
-            <div class="card">
+        <div class="row justify-content-center">
+          
+          <div class=" col-lg-12  mx-auto">
+            <div class="card shadowSec blurGlass border-radius-xl">
               <div class="row">
-                <div class="col-lg-5 ">
-                  <img src="./assets/img/logos/LogoCormagoBlancoFull.png" style="width: 140px;">
-                  <div class="bg-dark mt-n5 mb-1 ms-lg-3 border-radius-md">
+                <div class="col-lg-5 d-flex justify-content-center mt-4">
+                  
                     <!-- LEMA -->
-                    <div class="card-body p-5 position-relative " style="height: 506px; display: block;" id="lema">
-                     <img src="/assets/img/illustrations/Lema3.png" alt="">
+                    <div class=" position-relative " style="height: 550px; display: block;" id="lema">
+                      <img src="/assets/img/illustrations/FotoCotizaciones4.png" alt="" style="width: 450px; height: 550px;">
                     </div>
                     <!-- FOTOS MIP -->
                     <div class="card-body p-5 position-relative " style="height: 506px; display: none;" id="Serv1">
@@ -776,7 +633,7 @@
                           <div class="carousel-inner">
                             <div class="carousel-item active">
                               <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/MIP/1.jpg"
-                                alt="First slide" style="width: 470px; height: 450px;">                
+                                alt="First slide" style="width: 470px; height: 450px;">
                             </div>
                             <div class="carousel-item">
                               <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/MIP/2.jpg"
@@ -794,11 +651,11 @@
                               <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/MIP/5.jpg"
                                 alt="Third slide" style="width: 470px; height: 450px;">
                             </div>
-                          </div>                          
+                          </div>
                         </div>
                       </div>
-                     </div>
-                     <!-- FOTOS SEGURIDAD -->
+                    </div>
+                    <!-- FOTOS SEGURIDAD -->
                     <div class="card-body p-5 position-relative " style="height: 506px; display: none;" id="Serv2">
                       <div class="card card-raised page-carousel">
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -806,7 +663,7 @@
                           <div class="carousel-inner">
                             <div class="carousel-item active">
                               <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/Seguridad/1.jpg"
-                                alt="First slide" style="width: 470px; height: 450px;">                
+                                alt="First slide" style="width: 470px; height: 450px;">
                             </div>
                             <div class="carousel-item">
                               <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/Seguridad/2.png"
@@ -824,11 +681,11 @@
                               <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/Seguridad/5.png"
                                 alt="Third slide" style="width: 470px; height: 450px;">
                             </div>
-                          </div>                          
+                          </div>
                         </div>
                       </div>
-                     </div>
-                     <!-- FOTOS RME -->
+                    </div>
+                    <!-- FOTOS RME -->
                     <div class="card-body p-5 position-relative " style="height: 506px; display: none;" id="Serv3">
                       <div class="card card-raised page-carousel">
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -836,7 +693,7 @@
                           <div class="carousel-inner">
                             <div class="carousel-item active">
                               <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/MRE/RME1.png"
-                                alt="First slide" style="width: 470px; height: 450px;">                
+                                alt="First slide" style="width: 470px; height: 450px;">
                             </div>
                             <div class="carousel-item">
                               <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/MRE/RME2.png"
@@ -854,41 +711,46 @@
                               <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/MRE/RME5.png"
                                 alt="Third slide" style="width: 470px; height: 450px;">
                             </div>
-                          </div>                          
+                          </div>
                         </div>
                       </div>
-                     </div>
-                      <!-- FOTOS TRANSPORTE PERSONAL -->
+                    </div>
+                    <!-- FOTOS TRANSPORTE PERSONAL -->
                     <div class="card-body p-5 position-relative " style="height: 506px; display: none;" id="Serv4">
                       <div class="card card-raised page-carousel">
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
 
                           <div class="carousel-inner">
                             <div class="carousel-item active">
-                              <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/TransportePersonal/Chofer1.png"
-                                alt="First slide" style="width: 470px; height: 450px;">                
+                              <img class="d-block img-fluid"
+                                src="/assets/img/illustrations/Servicios/TransportePersonal/Chofer1.png"
+                                alt="First slide" style="width: 470px; height: 450px;">
                             </div>
                             <div class="carousel-item">
-                              <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/TransportePersonal/Chofer2.png"
+                              <img class="d-block img-fluid"
+                                src="/assets/img/illustrations/Servicios/TransportePersonal/Chofer2.png"
                                 alt="Second slide" style="width: 470px; height: 450px;">
                             </div>
                             <div class="carousel-item">
-                              <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/TransportePersonal/Personal1.png"
+                              <img class="d-block img-fluid"
+                                src="/assets/img/illustrations/Servicios/TransportePersonal/Personal1.png"
                                 alt="Third slide" style="width: 470px; height: 450px;">
                             </div>
                             <div class="carousel-item">
-                              <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/TransportePersonal/Personal2.png"
+                              <img class="d-block img-fluid"
+                                src="/assets/img/illustrations/Servicios/TransportePersonal/Personal2.png"
                                 alt="Third slide" style="width: 470px; height: 450px;">
                             </div>
                             <div class="carousel-item">
-                              <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/TransportePersonal/Personal3.png"
+                              <img class="d-block img-fluid"
+                                src="/assets/img/illustrations/Servicios/TransportePersonal/Personal3.png"
                                 alt="Third slide" style="width: 470px; height: 450px;">
                             </div>
-                          </div>                          
+                          </div>
                         </div>
                       </div>
-                     </div>
-                     <!-- FOTOS OBRA CIVIL -->
+                    </div>
+                    <!-- FOTOS OBRA CIVIL -->
                     <div class="card-body p-5 position-relative " style="height: 506px; display: none;" id="Serv5">
                       <div class="card card-raised page-carousel">
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -896,7 +758,7 @@
                           <div class="carousel-inner">
                             <div class="carousel-item active">
                               <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/Obra civil/1.jpg"
-                                alt="First slide" style="width: 470px; height: 450px;">                
+                                alt="First slide" style="width: 470px; height: 450px;">
                             </div>
                             <div class="carousel-item">
                               <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/Obra civil/2.jpg"
@@ -914,16 +776,13 @@
                               <img class="d-block img-fluid" src="/assets/img/illustrations/Servicios/Obra civil/5.jpg"
                                 alt="Third slide" style="width: 470px; height: 450px;">
                             </div>
-                          </div>                          
+                          </div>
                         </div>
                       </div>
-                     </div>
-                    <div class="row mt-5 text-center">
-                      
                     </div>
-                  </div>
-                  
-                  
+                    
+
+
                 </div>
                 <div class="col-lg-7">
                   <form id="contact-form" method="post" autocomplete="off">
@@ -962,7 +821,7 @@
                       </div>
                       <div>
                         <div class="input-group input-group-static mb-4">
-                          <label>Correo electronico</label>
+                          <label>Correo electrónico</label>
                           <input type="email" class="form-control" placeholder="ej. lucas@email.com">
                         </div>
                       </div>
@@ -992,14 +851,15 @@
 
                       </div>
                       <div class="d-flex  mt-3">
-                        <div class="form-check me-4 my-auto">
+                        <div class="form-check me-2 my-auto">
                           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
                             onclick="myFunction()">
-                          <label class="form-check-label mb-0 ms-0" for="flexRadioDefault2">
-                            Transporte de personal
+                          <label class="form-check-label mb-0 me-2" for="flexRadioDefault2">
+                            Transporte de personal      
                           </label>
+                         
                         </div>
-                        <div class="form-check me-3 ms-2 my-auto">
+                        <div class="form-check me-3 ms-3 my-auto">
                           <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
                             onclick="myFunction()">
                           <label class="form-check-label mb-0 ms-0" for="flexRadioDefault1">
@@ -1018,7 +878,7 @@
                         <div class="row mt-4">
                           <div class="col-md-6">
                             <div class="input-group input-group-static mb-4">
-                              <label>Tipo de vehiculo</label>
+                              <label>Tipo de vehículo</label>
                               <div class="choices" data-type="select-one" tabindex="0" role="listbox"
                                 aria-haspopup="true" aria-expanded="false">
                                 <div class="choices__inner p-0">
@@ -1026,8 +886,8 @@
                                     id="choices-leave" tabindex="-1" data-choice="active">
                                     <option value="mini van">Mini Van</option>
                                     <option value="van">Van</option>
-                                    <option value="microbus">Microbus</option>
-                                    <option value="autobus">Autobus</option>
+                                    <option value="microbus">Microbús</option>
+                                    <option value="autobus">Autobús</option>
                                   </select>
                                 </div>
                               </div>
@@ -1044,7 +904,7 @@
                         <div class="row mt-4">
                           <div class="col-md-6 ps-2">
                             <div class="input-group input-group-static mb-4">
-                              <label>Numero de rutas</label>
+                              <label>Número de rutas</label>
                               <input type="number" class="form-control ps-3" aria-label="Phone Number" placeholder="1">
                             </div>
                           </div>
@@ -1055,22 +915,22 @@
                             </div>
                           </div>
                         </div>
-                          <div class="row mt-3">
-                            <div class="col-md-6">
-                              <div class="input-group input-group-static mb-4">
-                                <label>Numero de pasajeros por unidad</label>
-                                <input type="number" class="form-control ps-3" placeholder="1" min="1" max="100">
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="input-group input-group-static mb-4" >
-                                <label class="label-element">Mts / Kms</label>
-                                <label>Distancia aproximada</label>
-                                <input type="text" class="form-control ps-3" >
-                              </div>
+                        <div class="row mt-3">
+                          <div class="col-md-6">
+                            <div class="input-group input-group-static mb-4">
+                              <label>Número de pasajeros por unidad</label>
+                              <input type="number" class="form-control ps-3" placeholder="1" min="1" max="100">
                             </div>
                           </div>
-                        <div>                          
+                          <div class="col-md-6">
+                            <div class="input-group input-group-static mb-4">
+                              <label class="label-element">Mts / Kms</label>
+                              <label>Distancia aproximada</label>
+                              <input type="text" class="form-control ps-3">
+                            </div>
+                          </div>
+                        </div>
+                        <div>
                         </div>
                         <div class="input-group input-group-static mt-4">
                           <label>Escribe tu comentario</label>
@@ -1082,7 +942,7 @@
                       <div class="mt-4" id="form3" style="display:none">
                         <div class="col-md-12">
                           <div class="input-group input-group-static mb-4">
-                            <label>Numero de elementos</label>
+                            <label>Número de elementos</label>
                             <input type="number" class="form-control ps-3" placeholder="1" min="1" max="100">
                           </div>
                         </div>
@@ -1096,7 +956,7 @@
                                 <div class="choices__inner p-0">
                                   <select class="form-control choices__input p-2" name="choices-leave"
                                     id="choices-leave" tabindex="-1" data-choice="active">
-                                    <option value="Choice 1">8 Hrs. (Turno Unico)</option>
+                                    <option value="Choice 1">8 Hrs. (Turno Único)</option>
                                     <option value="Choice 1">12x12</option>
                                     <option value="Choice 1">24x24</option>
                                     <option value="Choice 1">8x8x8</option>
@@ -1123,7 +983,7 @@
                         </div>
                         <div class="col-md-6">
                           <div class="input-group input-group-static mb-4">
-                            <label>Garantias</label>
+                            <label>Garantías</label>
                             <div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true"
                               aria-expanded="false">
                               <div class="choices__inner p-0">
@@ -1136,11 +996,11 @@
                             </div>
                           </div>
                         </div>
-                        <label>Tecnlogia y equipo de seguridad</label>
+                        <label>Tecnlogía y equipo de seguridad</label>
                         <div class="row mt-3 mb-2">
-                          <label>Equipamiento basico</label>
+                          <label>Equipamiento básico</label>
                           <div class="d-flex">
-                            <p class="text-white"> (Casco, Tolete, Cinturon, Lampara, Gas pimienta)</p>
+                            <p class="text-white"> (Casco, Tolete, Cinturón, Lámpara, Gas pimienta)</p>
                           </div>
                         </div>
                         <div class="row mt-2 mb-4">
@@ -1191,13 +1051,13 @@
                           </div>
                         </div>
                         <div class="row mt-3 mb-4">
-                          <label>Tecnologia</label>
+                          <label>Tecnología</label>
                           <div class="d-flex">
                             <div class="form-check me-3 my-auto">
                               <input class="form-check-input" type="checkbox" name="Seguridad6" value=""
                                 id="Seguridad6">
                               <label class="form-check-label mb-0 ms-0" for="Seguridad6">
-                                Camaras de Seguridad
+                                Cámaras de Seguridad
                               </label>
                             </div>
                             <div class="form-check me-3 my-auto">
@@ -1233,7 +1093,7 @@
                             <div class="form-check me-3 my-auto">
                               <input class="form-check-input" type="checkbox" name="Seguridad6" id="Seguridad10">
                               <label class="form-check-label mb-0 ms-0" for="Seguridad10">
-                                Digitalizacion de servicio
+                                Digitalización de servicio
                               </label>
                             </div>
                           </div>
@@ -1246,7 +1106,7 @@
                               <input class="form-check-input" type="checkbox" name="Seguridad6" value=""
                                 id="SeguridadT1">
                               <label class="form-check-label mb-0 ms-0" for="SeguridadT1">
-                                Motocilceta
+                                Motocicleta
                               </label>
                             </div>
                             <div class="form-check me-3 my-auto">
@@ -1305,7 +1165,7 @@
                               <input class="form-check-input" type="radio" name="flexRadioDefault2"
                                 id="flexRadioDefault6" onclick="myFunction()">
                               <label class="form-check-label mb-0 ms-0" for="flexRadioDefault6">
-                                SI
+                                SÍ
                               </label>
                             </div>
                             <div class="form-check me-3 my-auto">
@@ -1321,7 +1181,7 @@
                           <div class="row mt-4">
                             <div class="col-md-6 ps-2">
                               <div class="input-group input-group-static mb-4">
-                                <label>¿Cuantos?</label>
+                                <label>¿Cuántos?</label>
                                 <input type="number" class="form-control ps-3" aria-label="Phone Number" placeholder="1"
                                   min="1" max="100">
                               </div>
@@ -1362,7 +1222,7 @@
                             <div class="form-check me-3 my-auto">
                               <input class="form-check-input" type="checkbox" name="Seguridad6" value="" id="Plagas2">
                               <label class="form-check-label mb-0 ms-0" for="Plagas2">
-                                Murcielagos
+                                Murciélagos
                               </label>
                             </div>
                             <div class="form-check me-3 my-auto">
@@ -1423,7 +1283,7 @@
                             <input class="form-check-input" type="radio" name="flexRadioDefault2" id="residuo3"
                               onclick="myFunction()">
                             <label class="form-check-label mb-0 ms-0" for="residuo3">
-                              Residuo peligroso biologico e infeccioso
+                              Residuo peligroso biológico e infeccioso
                             </label>
                           </div>
                         </div>
@@ -1437,10 +1297,10 @@
                               </div>
                             </div>
                             <div class="col-md-6">
-                              <div class="input-group input-group-static mb-4" >
+                              <div class="input-group input-group-static mb-4">
                                 <label class="label-element">Kg</label>
                                 <label>Cantidad aproximada mensual</label>
-                                <input class="form-control ps-3" type="text"  >
+                                <input class="form-control ps-3" type="text">
                               </div>
                             </div>
                           </div>
@@ -1455,10 +1315,10 @@
                               </div>
                             </div>
                             <div class="col-md-6">
-                              <div class="input-group input-group-static mb-4"  >
+                              <div class="input-group input-group-static mb-4">
                                 <label class="label-element">Lt</label>
                                 <label>Cantidad aproximada mensual</label>
-                                <input class="form-control ps-3" type="text" >
+                                <input class="form-control ps-3" type="text">
                               </div>
                             </div>
                           </div>
@@ -1521,8 +1381,8 @@
                                     <td><input type="text" class="form-control"></td>
                                   </tr>
                                   <tr>
-                                    <td>Miscelaneos impregnados con material peligroso (Tierra, arena, guantes, cartón,
-                                      aserrin, trapos, estopas,
+                                    <td>Misceláneos impregnados con material peligroso (Tierra, arena, guantes, cartón,
+                                      aserrín, trapos, estopas,
                                       papeles, telas, arena o aserrin utilizado como contenedor o para limpiar derrames)
                                     </td>
                                     <td>Solido</td>
@@ -1555,7 +1415,8 @@
                                   </tr>
                                   <tr>
                                     <td>Tierra contaminada</td>
-                                    <td><input type="text" class="form-control"><</td>
+                                    <td><input type="text" class="form-control">
+                                      << /td>
                                     <td>Kg</td>
                                     <td><input type="text" class="form-control"></td>
                                   </tr>
@@ -2339,8 +2200,8 @@
                               <table class="tableizer-table">
                                 <thead>
                                   <tr class="tableizer-firstrow">
-                                    <th class="th1">RESIDUOS PELIGROSOS BIOLOGICOS E INFECCIOSOS</th>
-                                    <th>ESTADO FISICO</th>
+                                    <th class="th1">RESIDUOS PELIGROSOS BIOLÓGICOS E INFECCIOSOS</th>
+                                    <th>ESTADO FíSICO</th>
                                     <th>UNIDAD DE MEDIDA</th>
                                     <th>CANTIDAD APROXIMADA ANUAL</th>
                                   </tr>
@@ -2407,7 +2268,8 @@
                                   </tr>
                                   <tr>
                                     <td>Tierra contaminada</td>
-                                    <td><input type="text" class="form-control"><</td>
+                                    <td><input type="text" class="form-control">
+                                      << /td>
                                     <td>Kg</td>
                                     <td><input type="text" class="form-control"></td>
                                   </tr>
@@ -3136,91 +2998,97 @@
               </div>
             </div>
           </div>
-          <div class="row  mt-6"></div>
-
         </div>
       </div>
-    </section>
+  </section>
 
-    <!-- -------- START FOOTER 7 w/ DARK BACKGROUND AND 3 COLUMNS ------- -->
-    <footer class="footer py-5 my-1 bg-dark position-relative overflow-hidden">
+    <!-- -------- START FOOTER 7 w/ DARK BACKGROUND AND 3 COLUMNS ------ -->
+  <footer class="footer py-5 my-1 bg-dark position-relative overflow-hidden">
       <img src="../../assets/img/shapes/waves-white.svg" alt="pattern-lines"
         class="position-absolute start-0 top-0 w-100 opacity-1">
       <div class="container position-relative">
-        <div class="row mr-0">
-          <div class="col-lg-4 me-8 my-auto text-lg-start">
-            <ul class="flex-column ms-lg-n3 nav">
-              <li class="nav-item">
-                <a class="nav-link text-white opacity-8 text-sm" href="/index.html">
-                  INICIO
+        <div class="row ">
+          <div class="col-lg-12 d-flex justify-content-between align-items-center">
+            <div class="col-lg-4  my-auto text-lg-start">
+              <ul class="flex-column ms-lg-n3 nav">
+                <li class="nav-item">
+                  <a class="nav-link text-white opacity-8 text-sm" href="/index.html">
+                    INICIO
+                  </a>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link text-white opacity-8 text-sm" href="#empresa">
+                    EMPRESA
+                  </a>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link text-white opacity-8 text-sm" href="#servicios">
+                    SERVICIOS
+                  </a>
+                </li>
+  
+                <li class="nav-item">
+                  <a class="nav-link text-white opacity-8 text-sm" href="https://www.facebook.com/cormago"
+                    target="_blank">
+                    FACEBOOK
+                  </a>
+                </li>
+  
+              </ul>
+  
+            </div>
+            <div class="col-lg-4   my-auto text-center text-lg-center">
+  
+              <p class="text-white">Esq. calle Huixtla y Escuintla SN, Fraccionamiento "Las Flores", </br>
+                C.P. 30797
+                Tapachula, Chiapas.
+              </p>
+  
+              <p class="text-white">962 696 1664
+              </p>
+  
+              <p class="text-white">contacto@cormago.com.mx
+              </p>
+  
+            </div>
+            <div class="col-lg-4    text-lg-end">
+              <div>
+                <a class="nav-link text-white opacity-8 text-sm" href="javascript:;" target="_blank">
+                  <img src="/assets/img/logos/LogoHyvecode.png" style="width: 180px;">
                 </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-white opacity-8 text-sm" href="#empresa">
-                  EMPRESA
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-white opacity-8 text-sm" href="#servicios">
-                  SERVICIOS
-                </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link text-white opacity-8 text-sm" href="https://www.facebook.com/cormago"
-                  target="_blank">
-                  FACEBOOK
-                </a>
-              </li>
-
-            </ul>
-
+              </div>
+            </div>
           </div>
-          <div class="col-lg-4 me-2 my-auto text-lg-center align-items-center">
+          
 
-            <p class="text-white">Esq. calle Huixtla y Escuintla SN, Fraccionamiento "Las Flores", </br>
-              C.P. 30797
-              Tapachula, Chiapas.
-            </p>
-
-            <p class="text-white">962 696 1664
-            </p>
-
-            <p class="text-white">contacto@cormago.com.mx
-            </p>
-
-          </div>
-
-          <div class="col-lg-4 ms-7 my-auto text-lg-end">
-            <div>
-              <a class="nav-link text-white opacity-8 text-sm" href="javascript:;" target="_blank">
-                <img src="/assets/img/logos/HyveCode.png" style="width: 180px;">
+        </div>
+        <div class=" row mt-5 justify-content-center ">
+          <div class="col-lg-12 d-flex justify-content-center align-items-center">
+            <div class="col-lg-4  me-2 text-lg-end ">
+              <a class="nav-link text-white opacity-8 text-sm" href="./pages/privacy.html">
+                <h6>AVISO DE PRIVACIDAD</h6>
+              </a>
+            </div>
+            <div class="col-lg-1  text-lg-center" style="width: 10px">
+              <h6>|</h6>
+            </div>
+            <div class="col-lg-4 ms-2 text-lg-start">
+              <a class="nav-link text-white opacity-8  text-sm" href="./pages/terms.html">
+                <h6>TÉRMINOS Y CONDICIONES</h6>
               </a>
             </div>
           </div>
-
-        </div>
-        <div class=" row mt-5 justify-content-center align-items-center">
-          <div class="col-lg-3 text-lg-end">
-            <a class="nav-link text-white opacity-8 text-sm" href="./pages/privacy.html">
-              <h4>AVISO DE PRIVACIDAD</h4>
-            </a>
-          </div>
-          <div class="col-lg-1 text-lg-center" style="width: 35px">
-            <h1>|</h1>
-          </div>
-          <div class="col-lg-3 text-lg-start">
-            <a class="nav-link text-white opacity-8 text-sm" href="./pages/terms.html">
-              <h4>TERMINOS Y CONDICIONES</h4>
-            </a>
-          </div>
+          
         </div>
       </div>
-    </footer>
-    <!-- -------- END FOOTER 7 w/ DARK BACKGROUND AND 3 COLUMNS ------- -->
+  </footer>
+
     <!--   Core JS Files   -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <script src="./assets/js/map.js"></script>
+    <script src="./assets/js/bootstrap.js" type="text/javascript"></script>
     <script src="./assets/js/core/popper.min.js" type="text/javascript"></script>
     <script src="./assets/js/core/bootstrap.min.js" type="text/javascript"></script>
     <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
@@ -3310,7 +3178,7 @@
         var text17 = document.getElementById("Serv4");
         var text18 = document.getElementById("Serv5");
 
-        
+
 
         if (checkBox1.checked == true) {
           text1.style.display = "block";
@@ -3326,7 +3194,7 @@
           lema.style.display = "none";
           text17.style.display = "block";
         } else {
-          text2.style.display = "none";          
+          text2.style.display = "none";
           text17.style.display = "none";
         }
 
