@@ -51,7 +51,7 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: , 128, 154;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: 'Montserrat', sans-serif;;
+  --bs-font-sans-serif: 'Montserrat', sans-serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: var(--bs-font-sans-serif);
@@ -88,6 +88,8 @@
     scroll-behavior: smooth;
   }
 }
+
+
 
 body {
   margin: 0;
@@ -36644,7 +36646,7 @@ body.swal2-toast-shown .swal2-container.swal2-bottom-right {
   width: 100%;
   padding: 10px;
   border-bottom: 1px solid #dddddd;
-  background-color: #ffffff00;
+  background-color: #ffffff1a;
   margin: 0;
 }
 
@@ -38446,6 +38448,7 @@ text,
 
 .pcontact{
   color: #ffffff;
+  
 }
 
 .nav-item {
@@ -38540,13 +38543,7 @@ text,
   
   }
 
-  .divisor{
-    
-    width: 40%;
-    height: 2px;
-    background-color: #f89f1fa3;
-    
-  }
+  
 
   #map { height: 430px; }
 
@@ -38650,6 +38647,10 @@ text,
 
   .btnClient:hover{
     box-shadow: 0 15px 35px -1px rgba(178, 109, 49), 0 15px 35px -1px rgba(178, 109, 49) !important;
+  }
+
+  .owl-nav{
+    display: none;
   }
 
 
