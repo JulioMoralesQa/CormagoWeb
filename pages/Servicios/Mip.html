@@ -532,16 +532,14 @@
                         <label>Controladores fijos</label>
                         <div class="d-flex">
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="radio" name="controladores"
-                              id="controladores" onclick="myFunction()">
-                            <label class="form-check-label mb-0 ms-0" for="controladores">
+                            <input class="form-check-input" type="radio" name="controladores" value="SI" id="controladoresSi" onclick="myFunction()">
+                            <label class="form-check-label mb-0 ms-0" for="controladoresSi">
                               SI
                             </label>
                           </div>
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="radio" name="controladores" id="mipNo"
-                              onclick="myFunction()">
-                            <label class="form-check-label mb-0 ms-0" for="mipNo">
+                            <input class="form-check-input" type="radio" name="controladores" value="NO" id="controladoresNo" onclick="myFunction()">
+                            <label class="form-check-label mb-0 ms-0" for="controladoresNo">
                               No
                             </label>
                           </div>
@@ -610,8 +608,8 @@
                         </div>
                         <div class="mt-3">
                           <div class="input-group input-group-static mb-4">
-                            <label>Otros</label>
-                            <input type="text" class="form-control" placeholder="Favor de especificar">
+                            <label for="otros">Otros</label>
+                            <input type="text" class="form-control" placeholder="Favor de especificar" name="otros" id="otros">
                           </div>
                         </div>
                       </div>
@@ -624,7 +622,7 @@
                   </form>
                   
                   <div class="text-end mt-4">
-                    <button type="submit" name="button" class="btn bg-gradient-dark mb-0">Enviar1</button>
+                    <button type="submit" name="button" class="btn bg-gradient-dark mb-0">Enviar</button>
                   </div>
                   
 
@@ -637,51 +635,7 @@
       </div>
     </div>
 </section>
-<!-- -------- conexion con email js ------- -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-<script type="text/javascript">
-  emailjs.init('MGF6Fn3DXYfns3xOj');
-
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    var plagas = Array.from(document.querySelectorAll('[name="plagas"]:checked')).map(function(checkbox) {
-      return checkbox.value;
-      
-    }); 
-    var controladoresRadio = document.querySelector('input[name="controladores"]:checked');
-    var controladores = controladoresRadio ? controladoresRadio.value : 'No seleccionado';
-    
-    var dimensionesAprox = document.getElementById('dimensionesAprox').value;
-    var plagasList = plagas.join(', ');
-    var Telefono = document.getElementById('phone').value;
-    var messageContent = document.getElementById('messagee').value;
-    var contactParams = {
-      profilePro:document.getElementById('profilePro').value,
-      firstName: document.getElementById('firstName').value,
-      lastName: document.getElementById('lastName').value,
-      company: document.getElementById('company').value,
-      position: document.getElementById('position').value,
-      email: document.getElementById('email').value,
-      plagas:plagasList,
-      phoneNumber: Telefono,
-      inmueble: document.getElementById('choices-inmueble').value,
-      dimensionesAprox:dimensionesAprox,
-      controladores: controladores,
-      messagee: messageContent,
-     
-    };
-
-    emailjs.send('service_xcol6gm', 'template_tspbjha', contactParams)
-      .then(function(response) {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Tu mensaje ha sido enviado!');
-      }, function(error) {
-        console.log('FAILED...', error);
-        alert('Falló el envío del mensaje: ' + JSON.stringify(error));
-      });
-  });
-</script>
     <!-- -------- START FOOTER 7 w/ DARK BACKGROUND AND 3 COLUMNS ------- -->
     <footer class="footer py-5 my-1 bg-dark position-relative overflow-hidden">
       <img src="../../assets/img/shapes/waves-white.svg" alt="pattern-lines"
@@ -765,10 +719,82 @@
       </div>
   </footer>
   </div>
+<!-- -------- conexion con email js ------- -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+<script type="text/javascript">
+  emailjs.init('MGF6Fn3DXYfns3xOj');
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var plagas = Array.from(document.querySelectorAll('[name="plagas"]:checked')).map(function(checkbox) {
+      return checkbox.value;
+      
+    }); 
+    var controladoresValue = document.querySelector('input[name="controladores"]:checked') ?
+                         document.querySelector('input[name="controladores"]:checked').value : 'N/A';
+    //var controladoresRadio = document.querySelector('input[name="controladores"]:checked');
+    //var controladores = controladoresRadio ? controladoresRadio.value : 'No seleccionado';
+                         
+    var dimensionesAprox = document.getElementById('dimensionesAprox').value;
+    var plagasList = plagas.join(', ');
+    var Telefono = document.getElementById('phone').value;
+    var messageContent = document.getElementById('messagee').value;
+    var otrosTxt = document.getElementById('otros').value;
+
+    //variables de form SEGURIDAD PRIVADA
+
+    var transporte =Array.from(document.querySelectorAll('[name="transporte"]:checked')).map(function(checkbox){
+    return checkbox.value;
+  })
+  var selector
+      var extras = Array.from(document.querySelectorAll('[name="extras"]:checked')).map(function(checkbox) {
+      return checkbox.value;
+    });
+    var tecnologia = Array.from(document.querySelectorAll('[name="tecnologia"]:checked')).map(function(checkbox) {
+    return checkbox.value;
+  });
+
+    
+    var contactParams = {
+      profilePro:document.getElementById('profilePro').value,
+      firstName: document.getElementById('firstName').value,
+      lastName: document.getElementById('lastName').value,
+      company: document.getElementById('company').value,
+      position: document.getElementById('position').value,
+      email: document.getElementById('email').value,
+      plagas:plagasList,
+      phoneNumber: Telefono,
+      inmueble: document.getElementById('choices-inmueble').value,
+      dimensionesAprox:dimensionesAprox,
+      controladores: controladoresValue,
+      //controladores: controladores,
+      messageMIP: messageContent,
+      otrosMIP:otrosTxt,
+      //  PARAMETROS DE SEGURIDAD PRIVADA
+      numeroElementos: document.getElementById('numeroElementos') ? document.getElementById('numeroElementos').value : 'N/A',
+      horarioServicio: document.getElementById('choices-horario') ? document.getElementById('choices-horario').value : 'N/A',
+      transporte: transporte.join(',') || 'N/A',
+      Garantias: document.getElementById('choices-garantias') ? document.getElementById('choices-garantias').value : 'N/A',
+      transportePersonal: document.getElementById('choices-transporte') ? document.getElementById('choices-transporte').value : 'N/A',
+      extras: extras.join(', ') || 'N/A',  
+      tecnologia: tecnologia.join(', ') || 'N/A',
+     
+    };
+
+    emailjs.send('service_xcol6gm', 'template_tspbjha', contactParams)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Tu mensaje ha sido enviado!');
+      }, function(error) {
+        console.log('FAILED...', error);
+        alert('Falló el envío del mensaje: ' + JSON.stringify(error));
+      });
+  });
+</script>
   <!-- -------- END FOOTER 5 w/ DARK BACKGROUND ------- -->
   <!--   Core JS Files   -->
-  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="/assets/js/map.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
@@ -788,7 +814,10 @@
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
   <script src="../../assets/js/material-kit-pro.min.js?v=3.0.3" type="text/javascript"></script>
+  <script>
+
+  </script>
 </body>
-<
-  
+
+
 </html>

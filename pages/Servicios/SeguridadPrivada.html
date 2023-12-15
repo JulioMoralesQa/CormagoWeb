@@ -490,7 +490,7 @@
                               <div class="choices__inner p-0">
                                 <select class="form-control choices__input p-2" name="choices-horario"
                                   id="choices-horario" tabindex="-1" data-choice="active">
-                                  <option value="">Selecciona</option>
+                                  
                                   <option value="8 Hrs. (Turno Unico)">8 Hrs. (Turno Unico)</option>
                                   <option value="12x12">12x12</option>
                                   <option value="24x24">24x24</option>
@@ -665,7 +665,7 @@
                       </div>
                     </div>
                     <div class="text-end mt-4">
-                      <button type="submit" id="button" class="btn bg-gradient-dark mb-0">Enviar1</button>
+                      <button type="submit" id="button" class="btn bg-gradient-dark mb-0">Enviar</button>
                     </div>
 
                   </div>
@@ -795,8 +795,10 @@
   
      
 //VARIABLES QUE VIENEN DEL FORM PLAGAS
-  var plagasList= plagas.join(', ');
-
+  //var plagasList= plagas.join(', ');
+  var plagasList = plagas.join(', ') || 'N/A';
+  var dimensionesAprox = document.getElementById('dimensionesAprox') ? document.getElementById('dimensionesAprox').value : 'N/A'
+  var otrosTxt =Document.getElementById('otros') ? document.getElementById('otros').value :'N/A'
 //variable parametros donde metemos nuestros inputs del form para enviarlos a email.js
       var contactParams = {
 
@@ -806,7 +808,7 @@
       company: document.getElementById('company') ? document.getElementById('company').value : 'N/A',
       position: document.getElementById('position') ? document.getElementById('position').value : 'N/A',
       email: document.getElementById('email') ? document.getElementById('email').value : 'N/A',
-      extras: extras.join(', ') || 'N/A',
+      extras: extras.join(', ') || 'N/A',  
       tecnologia: tecnologia.join(', ') || 'N/A',
       transporte: transporte.join(',') || 'N/A',
       numeroElementos: document.getElementById('numeroElementos') ? document.getElementById('numeroElementos').value : 'N/A',
@@ -816,8 +818,11 @@
       transportePersonal: document.getElementById('choices-transporte') ? document.getElementById('choices-transporte').value : 'N/A',
       Garantias: document.getElementById('choices-garantias') ? document.getElementById('choices-garantias').value : 'N/A',
 // FORMULARIO DE PLAGAS
-      plagas:plagasList.join(', ')|| 'N/A'
-     // plagas:plagasList,
+     
+     plagas: plagasList,
+     inmueble: document.getElementById('choices-inmueble') ? document.getElementById('choices-inmueble').value : 'N/A',
+     dimensionesAprox:dimensionesAprox,
+     otrosMIP:otrosTxt,
       
        /* profilePro:document.getElementById('profilePro').value,
         firstName: document.getElementById('firstName').value,
