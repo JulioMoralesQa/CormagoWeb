@@ -39,7 +39,21 @@
   <link rel="stylesheet" type="text/css" href="/assets/css/owl.carousel.min.css">
 <link rel="stylesheet" type="text/css" href="/assets/css/stylesC.css">
 </head>
+<script type="text/javascript">
 
+ //function sendEmail() {
+  //console.log("hello world")
+  //var formulario = document.getElementById('firstName').value;
+  
+
+  // Realiza las acciones necesarias con las variables
+ // console.log(formulario);
+//}
+</script>
+
+
+ 
+  
 <body class="blog-categories bg-dark">
   <!-- Navbar Transparent -->
   <nav
@@ -435,43 +449,49 @@
                 <form id="contact-form" method="post" autocomplete="off">
                   <div class="card-body position-relative">
                     <div class="input-group input-group-static mb-4">
-                      <label>Perfil profesional</label>
-                      <input type="text" class="form-control" placeholder="Lic. Ing. C.P.">
+                      <label for="profilePro">Perfil profesional</label>
+                      <input type="text" class="form-control"  name="profilePro" id="profilePro" placeholder="Lic. Ing. C.P.">
                     </div>
                     <div class="row mt-4">
                       <div class="col-md-6">
                         <div class="input-group input-group-static mb-4">
-                          <label>Nombre</label>
-                          <input class="form-control" placeholder="Lucas" aria-label="First Name..." type="text">
+                          <label for="firstName">Nombre</label>
+                          <input class="form-control" placeholder="Lucas" id="firstName"  name="firstName" aria-label="First Name..." type="text">
                         </div>
                       </div>
                       <div class="col-md-6 ps-2">
                         <div class="input-group input-group-static mb-4">
-                          <label>Apellidos</label>
-                          <input type="text" class="form-control" placeholder="Jones" aria-label="Last Name...">
+                          <label for="lastName">Apellidos</label>
+                          <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Jones" aria-label="Last Name...">
                         </div>
                       </div>
                     </div>
                     <div class="row mt-4">
                       <div class="col-md-6">
                         <div class="input-group input-group-static mb-4">
-                          <label>Empresa</label>
-                          <input class="form-control" placeholder="Cormago" aria-label="First Name..." type="text">
+                          <label for="company">Empresa</label>
+                          <input class="form-control" name="company" id="company" placeholder="Cormago" aria-label="First Name..." type="text">
                         </div>
                       </div>
                       <div class="col-md-6 ps-2">
                         <div class="input-group input-group-static mb-4">
-                          <label>Cargo</label>
-                          <input type="text" class="form-control" placeholder="Gerente" aria-label="Last Name...">
+                          <label for="position">Cargo</label>
+                          <input type="text" name="position" id="position" class="form-control" placeholder="Gerente" aria-label="Last Name...">
                         </div>
                       </div>
+                    </div>
+                    <div class="input-group input-group-static mb-4">
+                      <label for="phone">Teléfono</label>
+                      <input type="tel" class="form-control" id="phone" name="phone" placeholder="Ingresa tu número de teléfono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                     </div>
                     <div>
                       <div class="input-group input-group-static mb-4">
-                        <label>Correo electrónico</label>
-                        <input type="email" class="form-control" placeholder="ej. lucas@email.com">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" name ="email" id="email" class="form-control" placeholder="ej. lucas@email.com">
                       </div>
                     </div>
+                    
+                  
                     
                     <!-- FORMULARIO OBRA CIVIL -->
                     <div class="input-group input-group-static mt-4" id="form1" style="display:none">
@@ -488,12 +508,13 @@
                             <div class="choices" data-type="select-one" tabindex="0" role="listbox"
                               aria-haspopup="true" aria-expanded="false">
                               <div class="choices__inner p-0">
-                                <select class="form-control choices__input p-2" name="choices-leave"
-                                  id="choices-leave" tabindex="-1" data-choice="active">
-                                  <option value="Choice 1">Oficinas</option>
-                                  <option value="Choice 1">Industria</option>
-                                  <option value="Choice 1">Hospital</option>
-                                  <option value="Choice 1">Dependencia federal</option>
+                                <select class="form-control choices__input p-2" name="choices-inmueble"
+                                  id="choices-inmueble" tabindex="-1" data-choice="active">
+                                  <option value="">Seleccionar</option>
+                                  <option value="Oficinas">Oficinas</option>
+                                  <option value="Industria">Industria</option>
+                                  <option value="Hospital">Hospital</option>
+                                  <option value="Dependencia federal">Dependencia federal</option>
                                 </select>
                               </div>
                             </div>
@@ -502,8 +523,8 @@
                         <div class="col-md-6 ps-2">
                           <div class="input-group input-group-static mb-4">
                             <label>Dimensiones aproximadas en M²</label>
-                            <input type="number" class="form-control ps-3" aria-label="Phone Number" placeholder="1"
-                              min="1" max="100">
+                            <input type="number" class="form-control ps-3" aria-label="Phone Number"name="dimensionesAprox" id="dimensionesAprox" placeholder="1"
+                              min="1" max="100" >
                           </div>
                         </div>
                       </div>
@@ -511,16 +532,14 @@
                         <label>Controladores fijos</label>
                         <div class="d-flex">
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault2"
-                              id="flexRadioDefault6" onclick="myFunction()">
-                            <label class="form-check-label mb-0 ms-0" for="flexRadioDefault6">
+                            <input class="form-check-input" type="radio" name="controladores" value="SI" id="controladoresSi" onclick="myFunction()">
+                            <label class="form-check-label mb-0 ms-0" for="controladoresSi">
                               SI
                             </label>
                           </div>
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault2" id="mipNo"
-                              onclick="myFunction()">
-                            <label class="form-check-label mb-0 ms-0" for="mipNo">
+                            <input class="form-check-input" type="radio" name="controladores" value="NO" id="controladoresNo" onclick="myFunction()">
+                            <label class="form-check-label mb-0 ms-0" for="controladoresNo">
                               No
                             </label>
                           </div>
@@ -531,7 +550,7 @@
                           <div class="col-md-6 ps-2">
                             <div class="input-group input-group-static mb-4">
                               <label>¿Cuantos?</label>
-                              <input type="number" class="form-control ps-3" aria-label="Phone Number" placeholder="1"
+                              <input type="number" class="form-control ps-3" aria-label="Phone Number"name="howMany" id="howMany" placeholder="1"
                                 min="1" max="100">
                             </div>
                           </div>
@@ -541,8 +560,8 @@
                               <div class="choices" data-type="select-one" tabindex="0" role="listbox"
                                 aria-haspopup="true" aria-expanded="false">
                                 <div class="choices__inner p-0">
-                                  <select class="form-control choices__input p-2" name="choices-leave"
-                                    id="choices-leave" tabindex="-1" data-choice="active">
+                                  <select class="form-control choices__input p-2" name="choices-horario"
+                                    id="choices-horario" tabindex="-1" data-choice="active">
                                     <option value="8 Hrs">8 Hrs</option>
                                     <option value="12 Hrs">12 hrs</option>
 
@@ -563,25 +582,25 @@
 
                         <div class="d-flex">
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" value="" id="Plagas1">
+                            <input class="form-check-input" type="checkbox" name="plagas" value="Serpientes" id="Plagas1">
                             <label class="form-check-label mb-0 ms-0" for="Plagas1">
                               Serpientes
                             </label>
                           </div>
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" value="" id="Plagas2">
+                            <input class="form-check-input" type="checkbox" name="plagas" value="Murcielagos" id="Plagas2">
                             <label class="form-check-label mb-0 ms-0" for="Plagas2">
                               Murcielagos
                             </label>
                           </div>
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" value="" id="Plagas3">
+                            <input class="form-check-input" type="checkbox" name="plagas" value="Abejas" id="Plagas3">
                             <label class="form-check-label mb-0 ms-0" for="Plagas3">
                               Abejas
                             </label>
                           </div>
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" id="Plagas4">
+                            <input class="form-check-input" type="checkbox" name="plagas" value="Palomas" id="Plagas4">
                             <label class="form-check-label mb-0 ms-0" for="Plagas4">
                               Palomas
                             </label>
@@ -589,19 +608,23 @@
                         </div>
                         <div class="mt-3">
                           <div class="input-group input-group-static mb-4">
-                            <label>Otros</label>
-                            <input type="text" class="form-control" placeholder="Favor de especificar">
+                            <label for="otros">Otros</label>
+                            <input type="text" class="form-control" placeholder="Favor de especificar" name="otros" id="otros">
                           </div>
                         </div>
                       </div>
                       <div class="input-group input-group-static mt-4">
                         <label>Mensaje</label>
-                        <textarea name="message" class="form-control" id="message" rows="3"></textarea>
+                        <textarea name="messagee" class="form-control" id="messagee" rows="3"></textarea>
                       </div>
                     </div>
-                    <div class="text-end mt-4">
-                      <button type="button" class="btn bg-gradient-dark mb-0">Enviar</button>
-                    </div>
+                   
+                  </form>
+                  
+                  <div class="text-end mt-4">
+                    <button type="submit" name="button" class="btn bg-gradient-dark mb-0">Enviar</button>
+                  </div>
+                  
 
                   </div>
                 </form>
@@ -696,7 +719,79 @@
       </div>
   </footer>
   </div>
+<!-- -------- conexion con email js ------- -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+<script type="text/javascript">
+  emailjs.init('MGF6Fn3DXYfns3xOj');
+
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var plagas = Array.from(document.querySelectorAll('[name="plagas"]:checked')).map(function(checkbox) {
+      return checkbox.value;
+      
+    }); 
+    var controladoresValue = document.querySelector('input[name="controladores"]:checked') ?
+                         document.querySelector('input[name="controladores"]:checked').value : 'N/A';
+    //var controladoresRadio = document.querySelector('input[name="controladores"]:checked');
+    //var controladores = controladoresRadio ? controladoresRadio.value : 'No seleccionado';
+                         
+    var dimensionesAprox = document.getElementById('dimensionesAprox').value;
+    var plagasList = plagas.join(', ');
+    var Telefono = document.getElementById('phone').value;
+    var messageContent = document.getElementById('messagee').value;
+    var otrosTxt = document.getElementById('otros').value;
+
+    //variables de form SEGURIDAD PRIVADA
+
+    var transporte =Array.from(document.querySelectorAll('[name="transporte"]:checked')).map(function(checkbox){
+    return checkbox.value;
+  })
+  var selector
+      var extras = Array.from(document.querySelectorAll('[name="extras"]:checked')).map(function(checkbox) {
+      return checkbox.value;
+    });
+    var tecnologia = Array.from(document.querySelectorAll('[name="tecnologia"]:checked')).map(function(checkbox) {
+    return checkbox.value;
+  });
+
+    
+    var contactParams = {
+      profilePro:document.getElementById('profilePro').value,
+      firstName: document.getElementById('firstName').value,
+      lastName: document.getElementById('lastName').value,
+      company: document.getElementById('company').value,
+      position: document.getElementById('position').value,
+      email: document.getElementById('email').value,
+      plagas:plagasList,
+      phoneNumber: Telefono,
+      inmueble: document.getElementById('choices-inmueble').value,
+      dimensionesAprox:dimensionesAprox,
+      controladores: controladoresValue,
+      //controladores: controladores,
+      messageMIP: messageContent,
+      otrosMIP:otrosTxt,
+      //  PARAMETROS DE SEGURIDAD PRIVADA
+      numeroElementos: document.getElementById('numeroElementos') ? document.getElementById('numeroElementos').value : 'N/A',
+      horarioServicio: document.getElementById('choices-horario') ? document.getElementById('choices-horario').value : 'N/A',
+      transporte: transporte.join(',') || 'N/A',
+      Garantias: document.getElementById('choices-garantias') ? document.getElementById('choices-garantias').value : 'N/A',
+      transportePersonal: document.getElementById('choices-transporte') ? document.getElementById('choices-transporte').value : 'N/A',
+      extras: extras.join(', ') || 'N/A',  
+      tecnologia: tecnologia.join(', ') || 'N/A',
+     
+    };
+
+    emailjs.send('service_xcol6gm', 'template_tspbjha', contactParams)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Tu mensaje ha sido enviado!');
+      }, function(error) {
+        console.log('FAILED...', error);
+        alert('Falló el envío del mensaje: ' + JSON.stringify(error));
+      });
+  });
+</script>
   <!-- -------- END FOOTER 5 w/ DARK BACKGROUND ------- -->
   <!--   Core JS Files   -->
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
@@ -719,6 +814,10 @@
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
   <script src="../../assets/js/material-kit-pro.min.js?v=3.0.3" type="text/javascript"></script>
+  <script>
+
+  </script>
 </body>
+
 
 </html>

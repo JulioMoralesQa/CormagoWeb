@@ -586,41 +586,45 @@
                 <form id="contact-form" method="post" autocomplete="off">
                   <div class="card-body position-relative">
                     <div class="input-group input-group-static mb-4">
-                      <label>Perfil profesional</label>
-                      <input type="text" class="form-control" placeholder="Lic. Ing. C.P.">
+                      <label for="profilePro">Perfil profesional</label>
+                      <input type="text" class="form-control" name="profilePro" id="profilePro" placeholder="Lic. Ing. C.P.">
                     </div>
                     <div class="row mt-4">
                       <div class="col-md-6">
                         <div class="input-group input-group-static mb-4">
-                          <label>Nombre</label>
-                          <input class="form-control" placeholder="Lucas" aria-label="First Name..." type="text">
+                          <label for="firstName">Nombre</label>
+                          <input class="form-control" placeholder="Lucas" name="firstName" id="firstName" aria-label="First Name..." type="text">
                         </div>
                       </div>
                       <div class="col-md-6 ps-2">
                         <div class="input-group input-group-static mb-4">
-                          <label>Apellidos</label>
-                          <input type="text" class="form-control" placeholder="Jones" aria-label="Last Name...">
+                          <label for="lastName">Apellidos</label>
+                          <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Jones" aria-label="Last Name...">
                         </div>
                       </div>
                     </div>
                     <div class="row mt-4">
                       <div class="col-md-6">
                         <div class="input-group input-group-static mb-4">
-                          <label>Empresa</label>
-                          <input class="form-control" placeholder="Cormago" aria-label="First Name..." type="text">
+                          <label for="company">Empresa</label>
+                          <input class="form-control" name="company" id="company" placeholder="Cormago" aria-label="First Name..." type="text">
                         </div>
                       </div>
                       <div class="col-md-6 ps-2">
                         <div class="input-group input-group-static mb-4">
-                          <label>Cargo</label>
-                          <input type="text" class="form-control" placeholder="Gerente" aria-label="Last Name...">
+                          <label for="position">Cargo</label>
+                          <input type="text" class="form-control" name="position" id="position" placeholder="Gerente" aria-label="Last Name...">
                         </div>
                       </div>
                     </div>
                     <div>
                       <div class="input-group input-group-static mb-4">
-                        <label>Correo electrónico</label>
-                        <input type="email" class="form-control" placeholder="ej. lucas@email.com">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Ingresa tu número de teléfono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                      </div>
+                      <div class="input-group input-group-static mb-4">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="ej. lucas@email.com">
                       </div>
                     </div>
                     
@@ -639,8 +643,8 @@
                             <div class="choices" data-type="select-one" tabindex="0" role="listbox"
                               aria-haspopup="true" aria-expanded="false">
                               <div class="choices__inner p-0">
-                                <select class="form-control choices__input p-2" name="choices-leave"
-                                  id="choices-leave" tabindex="-1" data-choice="active">
+                                <select class="form-control choices__input p-2" name="choices-vehiculo"
+                                  id="choices-vehiculo" tabindex="-1" data-choice="active">
                                   <option value="mini van">Mini Van</option>
                                   <option value="van">Van</option>
                                   <option value="microbus">Microbús</option>
@@ -653,7 +657,7 @@
                         <div class="col-md-6 ps-2">
                           <div class="input-group input-group-static mb-4">
                             <label>Cantidad de unidades</label>
-                            <input type="number" class="form-control ps-3" aria-label="Phone Number" placeholder="1"
+                            <input type="number" class="form-control ps-3" name="Unidades" id="Unidades" aria-label="Phone Number" placeholder="1"
                               min="1" max="100">
                           </div>
                         </div>
@@ -662,13 +666,13 @@
                         <div class="col-md-6 ps-2">
                           <div class="input-group input-group-static mb-4">
                             <label>Número de rutas</label>
-                            <input type="number" class="form-control ps-3" aria-label="Phone Number" placeholder="1">
+                            <input type="number" class="form-control ps-3" name="Rutas" id="Rutas" aria-label="Phone Number" placeholder="1">
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="input-group input-group-static mb-4">
                             <label>Horarios</label>
-                            <input class="form-control" type="text">
+                            <input class="form-control"  type="text" name="Horarios" id="Horarios">
                           </div>
                         </div>
                       </div>
@@ -676,14 +680,14 @@
                         <div class="col-md-6">
                           <div class="input-group input-group-static mb-4">
                             <label>Número de pasajeros por unidad</label>
-                            <input type="number" class="form-control ps-3" placeholder="1" min="1" max="100">
+                            <input type="number" class="form-control ps-3" name="Pasageros" id="Pasageros" placeholder="1" min="1" max="100">
                           </div>
                         </div>
                         <div class="col-md-6">
                           <div class="input-group input-group-static mb-4">
                             <label class="label-element">Mts / Kms</label>
                             <label>Distancia aproximada</label>
-                            <input type="text" class="form-control ps-3">
+                            <input type="text" class="form-control ps-3" name="Distancia" id="Distancia">
                           </div>
                         </div>
                       </div>
@@ -695,7 +699,7 @@
                       </div>
                     </div>
                     <div class="text-end mt-4">
-                      <button type="button" class="btn bg-gradient-dark mb-0">Enviar</button>
+                      <button type="submit"id="button" class="btn bg-gradient-dark mb-0">Enviar</button>
                     </div>
 
                   </div>
@@ -791,29 +795,64 @@
       </div>
   </footer>
   </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+  <script type="text/javascript">
+    emailjs.init('MGF6Fn3DXYfns3xOj');
+  
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+  
+      
+      var Telefono=document.getElementById('phone').value;
+      var messageContent=document.getElementById('message').value;
+      var contactParams = {
+        profilePro:document.getElementById('profilePro').value,  
+        firstName: document.getElementById('firstName').value,
+        lastname: document.getElementById('lastName').value,
+        company: document.getElementById('company').value,
+        position: document.getElementById('position').value,
+        email: document.getElementById('email').value,
+        phoneNumber:Telefono,
+        detalles:messageContent,
+        tipVehiculo:document.getElementById('vehiculo') ? document.getElementById('vehiculo').value : 'N/A',
+        numUnidades:Unidades,
+       rutas: document.getElementById('Rutas').value || 'N/A',
+        horarios:document.getElementById('Horarios').value || 'N/A',
+        pasageros:document.getElementById('Pasageros').value || 'N/A',
+        distancia:document.getElementById('Distancia').value || 'N/A',
+        
+       
+        
+
+       
+      };
+  
+      emailjs.send('service_xcol6gm', 'template_a7m0cy4', contactParams)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Tu mensaje ha sido enviado!');
+        }, function(error) {
+          console.log('FAILED...', error);
+          alert('Falló el envío del mensaje: ' + JSON.stringify(error));
+        });
+    });
+</script>
   <!-- -------- END FOOTER 5 w/ DARK BACKGROUND ------- -->
   <!--   Core JS Files   -->
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-    <script src="/assets/js/map.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
-    <script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-    <script src="/assets/js/owl.carousel.min.js"></script>
-      <script src="/assets/js/script.js"></script>
-  <script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <!--  Plugin for TypedJS, full documentation here: https://github.com/mattboldt/typed.js/ -->
-  <script src="../../assets/js/plugins/typedjs.js"></script>
-  <!--  Plugin for Parallax, full documentation here: https://github.com/wagerfield/parallax  -->
-  <script src="../../assets/js/plugins/parallax.min.js"></script>
-  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
-  <script src="../../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
-  <!--  Plugin for the blob animation -->
-  <script src="../../assets/js/plugins/anime.min.js" type="text/javascript"></script>
-  <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
-  <!--  Google Maps Plugin    -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-  <script src="../../assets/js/material-kit-pro.min.js?v=3.0.3" type="text/javascript"></script>
+<script src="/assets/js/map.js"></script> <!-- Aquí estaba el error tipográfico, se cerró incorrectamente como </scrip> -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="../../assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="../../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<script src="/assets/js/owl.carousel.min.js"></script>
+<script src="/assets/js/script.js"></script>
+<script src="../../assets/js/plugins/perfect-scrollbar.min.js"></script>
+<script src="../../assets/js/plugins/typedjs.js"></script>
+<script src="../../assets/js/plugins/parallax.min.js"></script>
+<script src="../../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+<script src="../../assets/js/plugins/anime.min.js" type="text/javascript"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+<script src="../../assets/js/material-kit-pro.min.js?v=3.0.3" type="text/javascript"></script>
 </body>
-
 </html>

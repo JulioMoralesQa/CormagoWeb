@@ -424,48 +424,52 @@
                 <form id="contact-form" method="post" autocomplete="off">
                   <div class="card-body position-relative">
                     <div class="input-group input-group-static mb-4">
-                      <label>Perfil profesional</label>
-                      <input type="text" class="form-control" placeholder="Lic. Ing. C.P.">
+                      <label for="profilePro">Perfil profesional</label>
+                      <input type="text" class="form-control" name="profilePro" id="profilePro" placeholder="Lic. Ing. C.P.">
                     </div>
                     <div class="row mt-4">
                       <div class="col-md-6">
                         <div class="input-group input-group-static mb-4">
-                          <label>Nombre</label>
-                          <input class="form-control" placeholder="Lucas" aria-label="First Name..." type="text">
+                          <label for="firstName">Nombre</label>
+                          <input class="form-control" placeholder="Lucas" name="firstName" id="firstName" aria-label="First Name..." type="text">
                         </div>
                       </div>
                       <div class="col-md-6 ps-2">
                         <div class="input-group input-group-static mb-4">
-                          <label>Apellidos</label>
-                          <input type="text" class="form-control" placeholder="Jones" aria-label="Last Name...">
+                          <label for="lastName">Apellidos</label>
+                          <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Jones" aria-label="Last Name...">
                         </div>
                       </div>
                     </div>
                     <div class="row mt-4">
                       <div class="col-md-6">
                         <div class="input-group input-group-static mb-4">
-                          <label>Empresa</label>
-                          <input class="form-control" placeholder="Cormago" aria-label="First Name..." type="text">
+                          <label for="company">Empresa</label>
+                          <input class="form-control" name="company" id="company" placeholder="Cormago" aria-label="First Name..." type="text">
                         </div>
                       </div>
                       <div class="col-md-6 ps-2">
                         <div class="input-group input-group-static mb-4">
-                          <label>Cargo</label>
-                          <input type="text" class="form-control" placeholder="Gerente" aria-label="Last Name...">
+                          <label for="position">Cargo</label>
+                          <input type="text" class="form-control" name="position" id="position" placeholder="Gerente" aria-label="Last Name...">
                         </div>
                       </div>
                     </div>
                     <div>
                       <div class="input-group input-group-static mb-4">
-                        <label>Correo electrónico</label>
-                        <input type="email" class="form-control" placeholder="ej. lucas@email.com">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Ingresa tu número de teléfono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                      </div>
+                      <div class="input-group input-group-static mb-4">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" class="form-control" name="email" id="email" placeholder="ej. lucas@email.com">
                       </div>
                     </div>
                     
                     <!-- FORMULARIO OBRA CIVIL -->
                     <div class="input-group input-group-static mt-4" id="form1" style="display:none">
-                      <label>Escribre de manera detallada tu requerimiento</label>
-                      <textarea name="message" class="form-control" id="message" rows="3"></textarea>
+                      <label>Escribre de manera det" id="message"allada tu requerimiento</label>
+                      <textarea name="message" class="form-control rows="3"></textarea>
                     </div>
 
                     <!-- FORMULARIO TRANSPORTE DE SEGURIDAD PRIVADA -->
@@ -473,7 +477,7 @@
                       <div class="col-md-12">
                         <div class="input-group input-group-static mb-4">
                           <label>Numero de elementos</label>
-                          <input type="number" class="form-control ps-3" placeholder="1" min="1" max="100">
+                          <input type="number" class="form-control ps-3" placeholder="1" min="1" max="100" name="numeroElementos" id="numeroElementos">
                         </div>
                       </div>
 
@@ -484,12 +488,13 @@
                             <div class="choices" data-type="select-one" tabindex="0" role="listbox"
                               aria-haspopup="true" aria-expanded="false">
                               <div class="choices__inner p-0">
-                                <select class="form-control choices__input p-2" name="choices-leave"
-                                  id="choices-leave" tabindex="-1" data-choice="active">
-                                  <option value="Choice 1">8 Hrs. (Turno Unico)</option>
-                                  <option value="Choice 1">12x12</option>
-                                  <option value="Choice 1">24x24</option>
-                                  <option value="Choice 1">8x8x8</option>
+                                <select class="form-control choices__input p-2" name="choices-horario"
+                                  id="choices-horario" tabindex="-1" data-choice="active">
+                                  
+                                  <option value="8 Hrs. (Turno Unico)">8 Hrs. (Turno Unico)</option>
+                                  <option value="12x12">12x12</option>
+                                  <option value="24x24">24x24</option>
+                                  <option value="8x8x8">8x8x8</option>
                                 </select>
                               </div>
                             </div>
@@ -501,10 +506,10 @@
                             <div class="choices" data-type="select-one" tabindex="0" role="listbox"
                               aria-haspopup="true" aria-expanded="false">
                               <div class="choices__inner p-0">
-                                <select class="form-control choices__input p-2" name="choices-leave"
-                                  id="choices-leave" tabindex="-1" data-choice="active">
-                                  <option value="Choice 1">Incluido</option>
-                                  <option value="Choice 1">No incluido</option>
+                                <select class="form-control choices__input p-2" name="choices-transporte"
+                                  id="choices-transporte" tabindex="-1" data-choice="active">
+                                  <option value="Incluido">Incluido</option>
+                                  <option value="No incluido">No incluido</option>
                                 </select>
                               </div>
                             </div>
@@ -517,10 +522,10 @@
                           <div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true"
                             aria-expanded="false">
                             <div class="choices__inner p-0">
-                              <select class="form-control choices__input p-2" name="choices-leave" id="choices-leave"
+                              <select class="form-control choices__input p-2" name="choices-garantias" id="choices-garantias"
                                 tabindex="-1" data-choice="active">
-                                <option value="Choice 1">Ninguna</option>
-                                <option value="Choice 1">Seguro especializado</option>
+                                <option value="Ninguna">Ninguna</option>
+                                <option value="Seguro especializado">Seguro especializado</option>
                               </select>
                             </div>
                           </div>
@@ -534,31 +539,31 @@
                         </div>
                       </div>
                       <div class="row mt-2 mb-4">
-                        <label>Extras</label>
+                        <label for="seguridad3">Extras</label>
                         <div class="d-flex">
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" value="" id="Seguridad3"
-                              onclick="myFunction()">
+                            <input class="form-check-input" type="checkbox" name="extras" value="Binomio Canino" id="Seguridad3">
+                             
                             <label class="form-check-label mb-0 ms-0" for="Seguridad3">
                               Binomio Canino
                             </label>
                           </div>
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" value="" id="Seguridad4"
-                              onclick="myFunction()">
+                            <input class="form-check-input" type="checkbox" name="extras" value="Guardia Armado" id="Seguridad4">
+                              
                             <label class="form-check-label mb-0 ms-0" for="Seguridad4">
                               Guardia Armado
                             </label>
                           </div>
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" value=""
-                              id="Seguridad5">
+                            <input class="form-check-input" type="checkbox" name="extras" value="Armamento" id="Seguridad5">
+                              
                             <label class="form-check-label mb-0 ms-0" for="Seguridad5">
                               Armamento
                             </label>
                           </div>
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" id="SeguridadExt">
+                            <input class="form-check-input" type="checkbox" name="extras" value="Chaleco Antibalas" id="SeguridadExt">
                             <label class="form-check-label mb-0 ms-0" for="SeguridadExt">
                               Chaleco Antibalas
                             </label>
@@ -584,20 +589,20 @@
                         <label>Tecnologia</label>
                         <div class="d-flex">
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" value=""
+                            <input class="form-check-input" type="checkbox" name="tecnologia" value="Camaras de Seguridad"
                               id="Seguridad6">
                             <label class="form-check-label mb-0 ms-0" for="Seguridad6">
                               Camaras de Seguridad
                             </label>
                           </div>
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" id="Seguridad7">
+                            <input class="form-check-input" type="checkbox" name="tecnologia" id="Seguridad7" value="Sistema de alarma">
                             <label class="form-check-label mb-0 ms-0" for="Seguridad7">
                               Sistema de alarma
                             </label>
                           </div>
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" id="Seguridad8">
+                            <input class="form-check-input" type="checkbox" name="tecnologia" id="Seguridad8" value="Sensores de movimiento">
                             <label class="form-check-label mb-0 ms-0" for="Seguridad8">
                               Sensores de movimiento
                             </label>
@@ -605,7 +610,7 @@
                         </div>
                         <div class="d-flex mt-2">
                           <div class="form-check me-4 my-auto pe-1">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" value=""
+                            <input class="form-check-input" type="checkbox" name="tecnologia" value="Monitoreo Remoto"
                               id="Seguridad9">
                             <label class="form-check-label" for="Seguridad9">
                               Monitoreo Remoto
@@ -613,7 +618,7 @@
                           </div>
 
                           <div class="form-check ms-2 my-auto">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" id="Seguridad11">
+                            <input class="form-check-input" type="checkbox" name="tecnologia" id="Seguridad11" value="Sensores de acceso a puertas y ventanas">
                             <label class="form-check-label mb-0" for="Seguridad11">
                               Sensores de acceso a puertas y ventanas
                             </label>
@@ -621,7 +626,7 @@
                         </div>
                         <div class="d-flex mt-2">
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" id="Seguridad10">
+                            <input class="form-check-input" type="checkbox" name="tecnologia" id="Seguridad10" value="Digitalizacion de servicio">
                             <label class="form-check-label mb-0 ms-0" for="Seguridad10">
                               Digitalizacion de servicio
                             </label>
@@ -633,20 +638,20 @@
                         <label>Transporte dentro del servicio</label>
                         <div class="d-flex">
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" value=""
+                            <input class="form-check-input" type="checkbox" name="transporte" value="Motocilceta"
                               id="SeguridadT1">
                             <label class="form-check-label mb-0 ms-0" for="SeguridadT1">
                               Motocilceta
                             </label>
                           </div>
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" id="SeguridadT2">
+                            <input class="form-check-input" type="checkbox" name="transporte" id="SeguridadT2" value="Cuatrimoto">
                             <label class="form-check-label mb-0 ms-0" for="SeguridadT2">
                               Cuatrimoto
                             </label>
                           </div>
                           <div class="form-check me-3 my-auto">
-                            <input class="form-check-input" type="checkbox" name="Seguridad6" id="SeguridadT3">
+                            <input class="form-check-input" type="checkbox" name="transporte" id="SeguridadT3" value="Unidad Patrulla">
                             <label class="form-check-label mb-0 ms-0" for="SeguridadT3">
                               Unidad Patrulla
                             </label>
@@ -660,7 +665,7 @@
                       </div>
                     </div>
                     <div class="text-end mt-4">
-                      <button type="button" class="btn bg-gradient-dark mb-0">Enviar</button>
+                      <button type="submit" id="button" class="btn bg-gradient-dark mb-0">Enviar</button>
                     </div>
 
                   </div>
@@ -756,7 +761,97 @@
       </div>
   </footer>
   </div>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+  <script type="text/javascript">
+    emailjs.init('MGF6Fn3DXYfns3xOj')
+  
+  
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+  // VARIABLES QUE SE CREARON PARA EXTRAER EL LOS PARAMETROS DE CADA CHECKBOX
+    var selector
+      var extras = Array.from(document.querySelectorAll('[name="extras"]:checked')).map(function(checkbox) {
+      return checkbox.value;
+    });
+    var tecnologia = Array.from(document.querySelectorAll('[name="tecnologia"]:checked')).map(function(checkbox) {
+    return checkbox.value;
+  });
+  var transporte =Array.from(document.querySelectorAll('[name="transporte"]:checked')).map(function(checkbox){
+    return checkbox.value;
+  })
+  var plagas = Array.from(document.querySelectorAll('[name="plagas"]:checked')).map(function(checkbox) {
+      return checkbox.value;
+      
+    }); 
+
+
+//AQUI TENEMOS VARIABLES DONDE TRATAMOS LAS VARIABLES DEL CHECKBOX Y LA OBTENCION DE VARIABLES NUMERICAS
+  var Telefono = document.getElementById('phone').value;
+  var numeroElementos = document.getElementById('numeroElementos').value;
+  var transporteList = transporte.join(',')
+  var tecnologiaList = tecnologia.join(', ');
+  var extrasList = extras.join(', ');
+  
+     
+//VARIABLES QUE VIENEN DEL FORM PLAGAS
+  //var plagasList= plagas.join(', ');
+  var plagasList = plagas.join(', ') || 'N/A';
+  var dimensionesAprox = document.getElementById('dimensionesAprox') ? document.getElementById('dimensionesAprox').value : 'N/A'
+  var otrosTxt =Document.getElementById('otros') ? document.getElementById('otros').value :'N/A'
+//variable parametros donde metemos nuestros inputs del form para enviarlos a email.js
+      var contactParams = {
+
+        profilePro: document.getElementById('profilePro') ? document.getElementById('profilePro').value : 'N/A',
+      firstName: document.getElementById('firstName') ? document.getElementById('firstName').value : 'N/A',
+      lastName: document.getElementById('lastName') ? document.getElementById('lastName').value : 'N/A',  
+      company: document.getElementById('company') ? document.getElementById('company').value : 'N/A',
+      position: document.getElementById('position') ? document.getElementById('position').value : 'N/A',
+      email: document.getElementById('email') ? document.getElementById('email').value : 'N/A',
+      extras: extras.join(', ') || 'N/A',  
+      tecnologia: tecnologia.join(', ') || 'N/A',
+      transporte: transporte.join(',') || 'N/A',
+      numeroElementos: document.getElementById('numeroElementos') ? document.getElementById('numeroElementos').value : 'N/A',
+      phoneNumber: document.getElementById('phone') ? document.getElementById('phone').value : 'N/A',
+      message: document.getElementById('message') ? document.getElementById('message').value : 'N/A',
+      horarioServicio: document.getElementById('choices-horario') ? document.getElementById('choices-horario').value : 'N/A',
+      transportePersonal: document.getElementById('choices-transporte') ? document.getElementById('choices-transporte').value : 'N/A',
+      Garantias: document.getElementById('choices-garantias') ? document.getElementById('choices-garantias').value : 'N/A',
+// FORMULARIO DE PLAGAS
+     
+     plagas: plagasList,
+     inmueble: document.getElementById('choices-inmueble') ? document.getElementById('choices-inmueble').value : 'N/A',
+     dimensionesAprox:dimensionesAprox,
+     otrosMIP:otrosTxt,
+      
+       /* profilePro:document.getElementById('profilePro').value,
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,  
+        company: document.getElementById('company').value,
+        position: document.getElementById('position').value,
+        email: document.getElementById('email').value,
+        extras: extrasList,
+        tecnologia:tecnologiaList,
+        transporte : transporteList,
+        numeroElementos: numeroElementos, 
+        phoneNumber: Telefono,
+        message: document.getElementById('message').value,
+        horarioServicio: document.getElementById('choices-horario').value,
+        transportePersonal: document.getElementById('choices-transporte').value,
+        Garantias: document.getElementById('choices-garantias').value,
+       */
+      };
+  //conexion con API de email.js
+      emailjs.send('service_xcol6gm', 'template_tspbjha', contactParams)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Tu mensaje ha sido enviado!');
+        }, function(error) {
+          console.log('FAILED...', error);
+          alert('Falló el envío del mensaje: ' + JSON.stringify(error));
+        });
+          });
+  </script>
   <!-- -------- END FOOTER 5 w/ DARK BACKGROUND ------- -->
   <!--   Core JS Files   -->
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
