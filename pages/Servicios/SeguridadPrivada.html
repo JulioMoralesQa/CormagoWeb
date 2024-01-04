@@ -458,11 +458,11 @@
                     <div>
                       <div class="input-group input-group-static mb-4">
                         <label for="phone">Teléfono</label>
-                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Ingresa tu número de teléfono" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="Ingresa tu número de teléfono" >
                       </div>
                       <div class="input-group input-group-static mb-4">
                         <label for="email">Correo electrónico</label>
-                        <input type="email" class="form-control" name="email" id="email" placeholder="ej. lucas@email.com">
+                        <input type="email" class="form-control" name="email" id="email" placeholder="ej. lucas@email.com" required>
                       </div>
                     </div>
                     
@@ -798,7 +798,7 @@
   //var plagasList= plagas.join(', ');
   var plagasList = plagas.join(', ') || 'N/A';
   var dimensionesAprox = document.getElementById('dimensionesAprox') ? document.getElementById('dimensionesAprox').value : 'N/A'
-  var otrosTxt =Document.getElementById('otros') ? document.getElementById('otros').value :'N/A'
+  var otrosTxt = 'N/A'
 //variable parametros donde metemos nuestros inputs del form para enviarlos a email.js
       var contactParams = {
 
