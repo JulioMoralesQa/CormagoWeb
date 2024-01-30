@@ -496,9 +496,9 @@
                       </div>
                     </div>
                     
-
+ 
                     <!-- Provincia -->
-                   <div class="row mt-4">
+                    <div class="row mt-4">
                     <!-- Provincia -->
                     <div class="col-md-6">
                         <div class="input-group input-group-static mb-4">
@@ -523,7 +523,7 @@
                             <div class="choices" data-type="select-one" tabindex="0" role="listbox"
                                  aria-haspopup="true" aria-expanded="false">
                                 <div class="choices__inner p-0">
-                                    <select class="form-control choices__input p-2" name="pueblo"
+                                    <select class="form-control choices__input p-2" name="pueblo" 
                                             id="pueblo" tabindex="-1" data-choice="active">
                                         <option value="">Seleccione una Ciudad...</option>
                                         
@@ -2523,6 +2523,7 @@ function formatDataForEmail(dataArray) {
 
   function cargarProvincias() {
     var array = [
+   
     "Aguascalientes",
     "BajaCalifornia",
     "BajaCaliforniaSur",
@@ -2560,19 +2561,21 @@ function formatDataForEmail(dataArray) {
     addOptions("provincia", array);
 }
 
-function addOptions(domElement, array) {
-    var selector = document.getElementById(domElement);
-    selector.innerHTML = ''; // Limpiar opciones existentes
-    for (var provincia of array) {
+//Función para agregar opciones a un <select>.
+  function addOptions(domElement, array) {
+    var selector = document.getElementsByName(domElement)[0];
+    for (provincia in array) {
         var opcion = document.createElement("option");
-        opcion.text = provincia;
-        opcion.value = provincia.toLowerCase().replace(/\s+/g, ''); 
+        opcion.text = array[provincia];
+        // aqui se anadio un value a los option para hacer mas facil escoger los pueblos
+        opcion.value = array[provincia].toLowerCase()
         selector.add(opcion);
     }
 }
 
 function cargarPueblos() {
     var listaPueblos = {
+      
       aguascalientes: ["Aguascalientes", "Asientos", "Calvillo", "Cosio", "El Llano", "Jesus Maria", "Pabellon de Arteaga", "Rincon de Romos", "San Francisco de los Romo", "San Jose de Gracia", "Tepezala"],
         bajacalifornia: ["Ensenada", "Mexicali", "Playas de Rosarito", "Tecate", "Tijuana"],
         bajacaliforniasur: ["Comondu", "La Paz", "Loreto", "Los Cabos", "Mulege"],
@@ -2613,7 +2616,7 @@ function cargarPueblos() {
     var pueblos = document.getElementById('pueblo');
     var provinciaSeleccionada = provincias.options[provincias.selectedIndex].value.replace(/\s+/g, '').toLowerCase(); // Formatear la entrada
 
-    pueblos.innerHTML = '<option value="">Seleccione un Pueblo...</option>';
+    pueblos.innerHTML = '<option value="">Seleccione una Ciudad...</option>';
     
     if(provinciaSeleccionada !== '') {
         var pueblosDeProvinciaSeleccionada = listaPueblos[provinciaSeleccionada] || [];

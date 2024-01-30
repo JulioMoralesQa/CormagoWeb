@@ -968,12 +968,12 @@
 }
 
 function addOptions(domElement, array) {
-    var selector = document.getElementById(domElement);
-    selector.innerHTML = ''; // Limpiar opciones existentes
-    for (var provincia of array) {
+    var selector = document.getElementsByName(domElement)[0];
+    for (provincia in array) {
         var opcion = document.createElement("option");
-        opcion.text = provincia;
-        opcion.value = provincia.toLowerCase().replace(/\s+/g, ''); // Convertir a minúsculas y eliminar espacios
+        opcion.text = array[provincia];
+        // aqui se anadio un value a los option para hacer mas facil escoger los pueblos
+        opcion.value = array[provincia].toLowerCase()
         selector.add(opcion);
     }
 }
@@ -1021,7 +1021,7 @@ function cargarPueblos() {
     var pueblos = document.getElementById('pueblo');
     var provinciaSeleccionada = provincias.options[provincias.selectedIndex].value.replace(/\s+/g, '').toLowerCase(); // Formatear la entrada
 
-    pueblos.innerHTML = '<option value="">Seleccione un Pueblo...</option>';
+    pueblos.innerHTML = '<option value="">Seleccione una Ciudad...</option>';
     
     if(provinciaSeleccionada !== '') {
         var pueblosDeProvinciaSeleccionada = listaPueblos[provinciaSeleccionada] || [];
