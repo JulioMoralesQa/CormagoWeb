@@ -909,13 +909,16 @@ function mostrarCampoOtro() {
     var Telefono = document.getElementById('phone').value;
     var messageContent = document.getElementById('messagee').value;
     var otrosTxt = document.getElementById('otros').value;
-
-
+    var otrosProfile = document.getElementById('otroPerfil').value;
+    var otroInmueble = document.getElementById('otroTipoInmueble').value;
     var estado = document.getElementById('provincia').value;
   var ciudad = document.getElementById('pueblo').value;
   var address = document.getElementById('Address').value;
-  
+  var howMany = document.getElementById('howMany').value;
+  var horario = document.getElementById('choices-horario').value;
     var phoneBusiness = document.getElementById('phoneBusiness').value;
+    var servicioCetreria = document.querySelector('input[name="servicioCetreria"]:checked') ? document.querySelector('input[name="servicioCetreria"]:checked').value : 'No especificado';
+  var otroServicio = document.getElementById('otroServicio').value;
 
 
     //variables de form SEGURIDAD PRIVADA
@@ -948,8 +951,12 @@ function mostrarCampoOtro() {
       ciudad: ciudad,
       address: address,
       phoneBusiness: phoneBusiness,
-
-
+      otroInmueble:otroInmueble,
+      otrosProfile:otrosProfile,
+      howMany: howMany,
+    horario: horario,
+    servicioCetreria: servicioCetreria,
+    otroServicio: otroServicio,
       //controladores: controladores,
       messageMIP: messageContent,
       otrosMIP:otrosTxt,

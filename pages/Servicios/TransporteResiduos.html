@@ -2454,6 +2454,11 @@ function formatDataForEmail(dataArray) {
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById('cotizaciones').scrollIntoView();
+});
+    
+
 function mostrarCampoOtro() {
   var selectorPerfil = document.getElementById("profilePro");
   var inputOtroPerfil = document.getElementById("otroPerfil");
@@ -2498,7 +2503,7 @@ function mostrarCampoOtro() {
      var ciudad = document.getElementById('pueblo').value;
      var address = document.getElementById('Address').value;
      var phoneBusiness = document.getElementById('phoneBusiness').value;
-
+     var otrosProfile = document.getElementById('otroPerfil').value;
 
     
       var contactParams = {
@@ -2522,6 +2527,7 @@ function mostrarCampoOtro() {
     cantidadResiduoManejo: cantidadResiduoManejo,
     viajesDesazolve: viajesDesazolve,
     cantidadDesazolve: cantidadDesazolve,
+    otrosProfile:otrosProfile,
         
     
 
