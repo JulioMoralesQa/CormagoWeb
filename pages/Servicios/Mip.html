@@ -421,7 +421,7 @@
   </section>
     
 <!-- -------- START SECTION COTIZACIONES ------- -->
-<section class=" pb-8 mb-5 blurGlass  border-radius-xl  " id="cotizaciones" >
+<section class=" pb-8 mb-5 blurGlass  border-radius-xl  " id="cotizaciones" name="cotizaciones" >
   <img src="/assets/img/shapes/SeccionCotizaciones3.png" alt="pattern-lines"
       class="position-absolute start-0 top-0 w-100 h-100 opacity-5">
     <div class="container" >        
@@ -448,22 +448,27 @@
               <div class="col-lg-7">
                 <form id="contact-form" method="post" autocomplete="off">
                   <div class="card-body position-relative">
-                    <div class="input-group input-group-static mb-4">
-                      <label for="profilePro">Perfil profesional</label>
-                      <div class="choices" data-type="select-one" tabindex="0" role="listbox"
-                        aria-haspopup="true" aria-expanded="false">
-                        <div class="choices__inner p-0">
-                          <select class="form-control choices__input p-2" name="profilePro"
-                            id="profilePro" tabindex="-1" data-choice="active">
-                            <option value="">Seleccionar</option>
-                            <option value="Ingeniero(a)">Ingeniero(a)</option>
-                            <option value="Licenciado(a)">Licenciado(a)</option>
-                            <option value="Doctor(a)">Doctor(a)</option>
-                            <option value="Actuario(a)">Actuario(a)</option>  
-                          </select>
+                    <div class="card-body position-relative">
+                      <div class="input-group input-group-static mb-4">
+                        <label for="profilePro">Perfil profesional</label>
+                        <div class="choices" data-type="select-one" tabindex="0" role="listbox" aria-haspopup="true" aria-expanded="false">
+                          <div class="choices__inner p-0">
+                            <select class="form-control choices__input p-2" name="profilePro" id="profilePro" onchange="mostrarCampoOtro();">
+                              <option value="">Seleccionar</option>
+                              <option value="Ingeniero(a)">Sr.Ingeniero(a)</option>
+                              <option value="Licenciado(a)">Sr.Licenciado(a)</option>
+                              <option value="otro">Otro</option>
+                            </select>
+                          </div>
                         </div>
                       </div>
-                    </div>
+                      
+                      <div class="mt-3">
+                        <div class="input-group input-group-static mb-4">
+                          <label for="otroPerfil" id="labelOtroPerfil" style="display:none;">Otro perfil profesional</label>
+                          <input type="text" id="otroPerfil" name="otroPerfil" class="form-control" style="display:none;" placeholder="Otro">
+                        </div>
+                      </div>
                     <div class="row mt-4">
                       <div class="col-md-6">
                         <div class="input-group input-group-static mb-4">
@@ -482,7 +487,19 @@
                       <div class="col-md-6">
                         <div class="input-group input-group-static mb-4">
                           <label for="company">Empresa</label>
-                          <input class="form-control" name="company" id="company" placeholder="Cormago" aria-label="First Name..." type="text">
+                          <input class="form-control" name="company" id="company" placeholder="Cormago" aria-label="First Name..." type="text" list="company-types">
+                          <datalist id="company-types">
+                            <option value="S.A. de C.V.">Sociedad Anónima de Capital Variable</option>
+                            <option value="S.C.">Sociedad Cooperativa</option>
+                            <option value="S.A.P.I. de C.V.">Sociedad Anónima Promotora de Inversión de Capital Variable</option>
+                            <option value="S.A.">Sociedad Anónima</option>
+                            <option value="S. de R.L.">Sociedades de responsabilidad limitada</option>
+                            <option value="S.A.S.">Sociedad por Acciones Simplificada</option>
+                            <option value="S.A.P.I.">Sociedad Anónima Promotora de Inversión</option>
+                            <option value="S. EN C. S.">Sociedad en comandita simple</option>
+                            <option value="S.N.C.">Sociedad en nombre colectivo</option>
+                            <option value="S. EN C. POR A.">Sociedad en comandita por acciones</option>
+                          </datalist>
                         </div>
                       </div>
                       <div class="col-md-6 ps-2">
@@ -580,15 +597,21 @@
                             <div class="choices" data-type="select-one" tabindex="0" role="listbox"
                               aria-haspopup="true" aria-expanded="false">
                               <div class="choices__inner p-0">
-                                <select class="form-control choices__input p-2" name="choices-inmueble"
-                                  id="choices-inmueble" tabindex="-1" data-choice="active">
+                                <select class="form-control choices__input p-2" name="choices-inmueble" id="choices-inmueble" tabindex="-1" data-choice="active">
                                   <option value="">Seleccionar</option>
                                   <option value="Oficinas">Oficinas</option>
                                   <option value="Industria">Industria</option>
                                   <option value="Hospital">Hospital</option>
                                   <option value="Dependencia federal">Dependencia federal</option>
+                                  <option value="otro">Otro</option>
                                 </select>
                               </div>
+                            </div>
+                          </div>
+                          <div id="otroTipoInmuebleDiv" style="display:none;">
+                            <div class="input-group input-group-static mb-4">
+                              <label for="otroTipoInmueble">Especifica el tipo de inmueble</label>
+                              <input type="text" id="otroTipoInmueble" name="otroTipoInmueble" class="form-control" placeholder="Ingresa el tipo de inmueble">
                             </div>
                           </div>
                         </div>
@@ -685,6 +708,32 @@
                           </div>
                         </div>
                       </div>
+                      <div class="row mt-3">
+                        <div class="col-md-12">
+                          <label>Servicios Extra</label>
+                        </div>
+                      
+                        <div class="col-md-6">
+                          <label>Servicio especializado de cetrería</label>
+                          <div class="form-check me-3 my-auto">
+                          
+                            <input class="form-check-input" type="radio" name="servicioCetreria" id="cetreriaSi" value="Si">
+                            <label class="form-check-label" for="cetreriaSi">Sí</label>
+                          </div>
+                          <div class="form-check me-3 my-auto">
+                            <input class="form-check-input" type="radio" name="servicioCetreria" id="cetreriaNo" value="No">
+                            <label class="form-check-label" for="cetreriaNo">No</label>
+                          </div>
+                        </div>
+                      
+                        <div class="col-md-6">
+                          <div class="input-group input-group-static mb-4">
+                          <label for="otroServicio">Otros</label>
+                          <input type="text" class="form-control" id="otroServicio" name="otroServicio" placeholder="Especifica otro servicio">
+                        </div>
+                        </div>
+                      </div>
+                      
                       <div class="input-group input-group-static mt-4">
                         <label>Mensaje</label>
                         <textarea name="messagee" class="form-control" id="messagee" rows="3"></textarea>
@@ -795,6 +844,53 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 <script type="text/javascript">
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById('cotizaciones').scrollIntoView();
+});
+
+
+
+function myFunction() {
+  var radioSi = document.getElementById("controladoresSi").checked;
+  var formSi = document.getElementById("formSi");
+
+  if (radioSi) {
+    formSi.style.display = "block";
+  } else {
+    formSi.style.display = "none";
+  }
+}
+
+
+
+
+document.getElementById('choices-inmueble').addEventListener('change', function() {
+  var selectedOption = this.value;
+  var otroDiv = document.getElementById('otroTipoInmuebleDiv');
+  if (selectedOption === 'otro') {
+    otroDiv.style.display = 'block';
+  } else {
+    otroDiv.style.display = 'none';
+  }
+});
+
+  
+function mostrarCampoOtro() {
+  var selectorPerfil = document.getElementById("profilePro");
+  var inputOtroPerfil = document.getElementById("otroPerfil");
+  var labelOtroPerfil = document.getElementById("labelOtroPerfil");
+
+  if (selectorPerfil.value === "otro") {
+    // Mostrar el campo y la etiqueta para "Otro perfil"
+    inputOtroPerfil.style.display = "block";
+    labelOtroPerfil.style.display = "block";
+  } else {
+    // Ocultar el campo y la etiqueta para "Otro perfil"
+    inputOtroPerfil.style.display = "none";
+    labelOtroPerfil.style.display = "none";
+  }
+}
+
   emailjs.init('MGF6Fn3DXYfns3xOj');
 
   document.getElementById('contact-form').addEventListener('submit', function(event) {
